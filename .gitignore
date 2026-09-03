@@ -1,0 +1,31 @@
+# Secrets — never commit these
+.env
+backend/.env
+.env.*
+!.env.example
+
+# Database dumps from scripts.backup. The default filename lands in the working
+# directory, which is usually inside the repository.
+backup-*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

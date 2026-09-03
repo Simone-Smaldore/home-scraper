@@ -1,0 +1,2748 @@
+{
+ "count": 9,
+ "results": [
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 131601550,
+    "uuid": "17bdd47e-27cd-5364-adaf-c784af263b42",
+    "advertiser": {
+     "agency": {
+      "id": 144277,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4180"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "customType": "tempocasa",
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "TEMPOCASA Torino Rebaudengo",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1115576736.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1115576738.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/144277/tempocasa-torino-rebaudengo/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4180"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "andrea scalise",
+      "label": "agente immobiliare",
+      "imageUrl": "https://pic.im-cdn.it/agenti/460854/1173578304/80.jpg"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 149000,
+     "formattedValue": "€ 149.000",
+     "priceRange": "100.001 - 150.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1995879244,
+         "caption": "Salone",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1995879244/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1995879224,
+         "caption": "Ingresso",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1995879224/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [
+        null
+       ],
+       "hasMultimedia": true
+      },
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2°, con ascensore",
+       "floorOnlyValue": "2",
+       "ga4FloorValue": "2"
+      },
+      "ga4Condition": "Ottimo / Ristrutturato",
+      "price": {
+       "visible": true,
+       "value": 149000,
+       "formattedValue": "€ 149.000",
+       "priceRange": "100.001 - 150.000 &euro;"
+      },
+      "rooms": "4",
+      "elevator": true,
+      "surface": "100 m²",
+      "typology": {
+       "id": 14,
+       "name": "Quadrilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "views": [
+       {
+        "id": 9,
+        "name": "db_feature.view.id_9"
+       }
+      ],
+      "ga4features": [
+       "fibra ottica",
+       "porta blindata",
+       "accesso per disabili",
+       "balcone",
+       "impianto tv centralizzato",
+       "arredato",
+       "cantina",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Centralizzato",
+      "caption": "AMPIO APPARTAMENTO DI 100 MQ RISTRUTTURATO",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "Rif: 24 - CORSO TARANTO fronte giardini proponiamo in vendita in esclusiva ampio appartamento composto da: ingresso, ampio soggiorno living, cucina abitabile,  2 camere da letto ,  bagno, ripostiglio, lavanderia, due balconi con  doppia esposizione , cantina \nCOMPLETAMENTE RISTRUTTURATO \nCOMPLETAMENTE AMMOBILIATO\n\nVisionate tutte le nostre proposte immobiliari sul nostro nuovo sito www.tempocasa.c",
+      "photo": {
+       "id": 1995879244,
+       "caption": "Salone",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1995879244/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1995879244/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1995879244/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "2",
+      "location": {
+       "address": "Corso Taranto 15",
+       "latitude": 45.1009,
+       "longitude": 7.7017,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Regio Parco, Vanchiglia, Vanchiglietta",
+       "microzone": "Regio Parco",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "surface",
+        "label": "100 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       },
+       {
+        "type": "elevator",
+        "label": "Ascensore",
+        "compactLabel": "Sì"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "furniture",
+        "label": "Arredato"
+       },
+       {
+        "type": "basement",
+        "label": "Cantina"
+       }
+      ]
+     }
+    ],
+    "title": "Quadrilocale corso Taranto 15, Regio Parco, Torino",
+    "type": "ad",
+    "typology": {
+     "id": 14,
+     "name": "Quadrilocale"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Quadrilocale corso Taranto 15, Regio Parco, Torino",
+    "url": "https://www.immobiliare.it/annunci/131601550/"
+   },
+   "idGeoHash": "u0j2x625",
+   "_fixture": "agency_full"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 128397912,
+    "uuid": "6ca3f262-c81f-5eb6-a5fc-c1bc85b34862",
+    "advertiser": {
+     "agency": {
+      "id": 144277,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4180"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "customType": "tempocasa",
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "TEMPOCASA Torino Rebaudengo",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1115576736.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1115576738.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/144277/tempocasa-torino-rebaudengo/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4180"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "andrea scalise",
+      "label": "agente immobiliare",
+      "imageUrl": "https://pic.im-cdn.it/agenti/460854/1173578304/80.jpg"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 115000,
+     "formattedValue": "€ 115.000",
+     "priceRange": "100.001 - 150.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1910336132,
+         "caption": "Salone",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1910336132/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1910336182,
+         "caption": "Ingresso",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1910336182/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [
+        null
+       ],
+       "hasMultimedia": true
+      },
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "T",
+       "value": "Piano terra, con ascensore",
+       "floorOnlyValue": "piano terra",
+       "ga4FloorValue": "piano terra"
+      },
+      "ga4Condition": "Buono / Abitabile",
+      "price": {
+       "visible": true,
+       "value": 115000,
+       "formattedValue": "€ 115.000",
+       "priceRange": "100.001 - 150.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "90 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "videocitofono",
+       "porta blindata",
+       "accesso per disabili",
+       "balcone",
+       "impianto tv centralizzato",
+       "cantina",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Centralizzato",
+      "caption": "Via Monte rosa 149",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "Rif: 18 - TEMPOCASA REBAUDENGO L’AGENZIA IMMOBILIARE CON PIU IMMOBILI IN ZONA\nSei alla ricerca di un appartamento in ottima zona servita?\nStai cercando un appartamento completamente ristrutturato?\nVorresti vivere in una soluzione comoda ed accogliente?\nLa Tempocasa di PIAZZA REBAUDENGO ha quello che fa per te!\n\nProponiamo in vendita esclusiva un ampio Trilocale al piano rialzato, composto da: ingr",
+      "photo": {
+       "id": 1910336132,
+       "caption": "Salone",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1910336132/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1910336132/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1910336132/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "2",
+      "location": {
+       "address": "Via Monte Rosa 149",
+       "latitude": 45.0974,
+       "longitude": 7.6998,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Regio Parco, Vanchiglia, Vanchiglietta",
+       "microzone": "Regio Parco",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "90 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano T",
+        "compactLabel": "T"
+       },
+       {
+        "type": "elevator",
+        "label": "Ascensore",
+        "compactLabel": "Sì"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "basement",
+        "label": "Cantina"
+       }
+      ]
+     }
+    ],
+    "title": "Trilocale via Monte Rosa 149, Regio Parco, Torino",
+    "type": "ad",
+    "typology": {
+     "id": 14,
+     "name": "Trilocale"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Trilocale via Monte Rosa 149, Regio Parco, Torino",
+    "url": "https://www.immobiliare.it/annunci/128397912/"
+   },
+   "idGeoHash": "u0j2x1wz",
+   "_fixture": "ground_floor"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 131445694,
+    "uuid": "91667d32-89c2-5fae-891c-20ab974e8896",
+    "advertiser": {
+     "agency": {
+      "id": 202521,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1980 5310"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "Home & Living",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1404258617.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1404258619.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/202521/home-and-living-torino/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1980 5310"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "Marco Malandrino",
+      "label": "agente immobiliare",
+      "imageUrl": "https://pic.im-cdn.it/agenti/209400/633679710/80.jpg"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 249000,
+     "formattedValue": "€ 249.000",
+     "priceRange": "200.001 - 300.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1985162142,
+         "caption": "Terrazzo",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1985162142/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1985162146,
+         "caption": "Terrazzo",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1985162146/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [
+        null
+       ],
+       "hasMultimedia": true
+      },
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "S, 2",
+       "value": "2 piani: Interrato (-1), 2°, con ascensore",
+       "floorOnlyValue": "interrato (-1), 2",
+       "ga4FloorValue": "interrato (-1), 2"
+      },
+      "ga4Condition": "Ottimo / Ristrutturato",
+      "price": {
+       "visible": true,
+       "value": 249000,
+       "formattedValue": "€ 249.000",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "85 m²",
+      "typology": {
+       "id": 15,
+       "name": "Attico"
+      },
+      "ga4Garage": "1 in box privato/box in garage",
+      "typologyGA4Translation": "Attico - Mansarda",
+      "ga4features": [
+       "cancello elettrico",
+       "fibra ottica",
+       "videocitofono",
+       "impianto di allarme",
+       "porta blindata",
+       "esposizione interna",
+       "accesso per disabili",
+       "balcone",
+       "terrazzo",
+       "impianto tv centralizzato",
+       "parzialmente arredato"
+      ],
+      "ga4Heating": "Autonomo",
+      "caption": "BELLISSIMO ATTICO LOFT CON TERRAZZO",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "TORINO - CORSO MORTARA 10 - \n\nOfficine S nasce da quelle che un tempo erano le Officine Savigliano, l’ex fabbrica di treni e carpenteria metallica situata in corso Mortara a Torino. L’area ha subito radicali trasformazioni, senza perdere la sua vocazione industriale.\nEssa sorge in uno dei quartieri più dinamici e in continua riqualificazione della città, si trova a pochi passi dal cosiddetto “Migl",
+      "photo": {
+       "id": 1985162142,
+       "caption": "Terrazzo",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1985162142/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1985162142/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1985162142/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "1",
+      "location": {
+       "address": "Corso Mortara",
+       "latitude": 45.0901,
+       "longitude": 7.6755,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Borgo Vittoria, Parco Dora",
+       "microzone": "Parco Dora",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "85 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano S, 2",
+        "compactLabel": "S, 2"
+       },
+       {
+        "type": "elevator",
+        "label": "Ascensore",
+        "compactLabel": "Sì"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "terrace",
+        "label": "Terrazzo"
+       },
+       {
+        "type": "furniture",
+        "label": "Parzialmente Arredato"
+       }
+      ]
+     }
+    ],
+    "title": "Attico corso Mortara 10, Parco Dora, Torino",
+    "type": "ad",
+    "typology": {
+     "id": 15,
+     "name": "Attico"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Attico corso Mortara 10, Parco Dora, Torino",
+    "url": "https://www.immobiliare.it/annunci/131445694/"
+   },
+   "idGeoHash": "u0j2w8mh",
+   "_fixture": "box"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 115369753,
+    "uuid": "474c2439-7724-57a2-a385-b73cc440c559",
+    "advertiser": {
+     "agency": {
+      "id": 382617,
+      "type": "constructor",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4339"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": false,
+       "virtualVisitEnabled": false
+      },
+      "isPaid": true,
+      "label": "Impresa Edile",
+      "displayName": "Promicasa srl",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1093792811.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1093792813.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/imprese-edili/382617/promicasa/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4339"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "Promicasa srl",
+      "label": "agente immobiliare"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 199800,
+     "formattedValue": "€ 199.800 - € 308.470",
+     "minValue": "€ 199.800",
+     "maxValue": "€ 308.470"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1863281481,
+         "caption": "Planimetria",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1863281481/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1863261231,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1863261231/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [],
+       "hasMultimedia": true
+      },
+      "isMain": true,
+      "price": {
+       "visible": true,
+       "value": 199800,
+       "formattedValue": "€ 199.800 - € 308.470",
+       "minValue": "€ 199.800",
+       "maxValue": "€ 308.470"
+      },
+      "surface": "67 m²",
+      "typology": {
+       "id": 276,
+       "name": "Progetto"
+      },
+      "ga4Garage": "16 in box privato/box in garage",
+      "typologyGA4Translation": "Progetto",
+      "ga4features": [
+       "accesso per disabili",
+       "parcheggio bici"
+      ],
+      "ga4Heating": "Autonomo",
+      "caption": "Condominio Baracca 36",
+      "category": {
+       "id": 27,
+       "name": "Nuove costruzioni"
+      },
+      "description": "AVANGUARDIA, EFFICIENZA ENERGETICA E BENESSERE SONO IL CUORE DI UN PROGETTO RICAMATO SU MISURA SULLE NECESSITA’ DEL CLIENTE E CAPACE DI RISPONDERE ALLE SFIDE CONTEMPORANEE\n\n“Condominio Baracca 36” è un nuovo progetto edilizio che prevede la costruzione di una palazzina composta da 4 piani fuori terra per un totale di 16 unità abitative, compresa una villetta semi-indipendente con ampio giardino, o",
+      "photo": {
+       "id": 1863281481,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1863281481/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1863281481/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1863281481/xxl.jpg"
+       }
+      },
+      "location": {
+       "address": "Via Francesco Baracca",
+       "latitude": 45.0103,
+       "longitude": 7.6576,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "San Pietro, Mercato, Santa Maria",
+       "microzone": "San Pietro",
+       "city": "Moncalieri",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "2 - 4 locali",
+        "compactLabel": "2 - 4"
+       },
+       {
+        "type": "surface",
+        "label": "da 67 m²"
+       },
+       {
+        "type": "typologyAmount",
+        "label": "16 tipologie",
+        "compactLabel": "16"
+       }
+      ],
+      "rooms": "2 - 4"
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "T",
+       "value": "Piano terra, con ascensore",
+       "floorOnlyValue": "piano terra",
+       "ga4FloorValue": "piano terra"
+      },
+      "price": {
+       "visible": true,
+       "value": 199800,
+       "formattedValue": "€ 199.800",
+       "minValue": "€ 199.800",
+       "priceRange": "150.001 - 200.000 &euro;"
+      },
+      "rooms": "2",
+      "elevator": true,
+      "surface": "68 m²",
+      "typology": {
+       "id": 14,
+       "name": "Bilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1863294893,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1863294893/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036061/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "2 locali",
+        "compactLabel": "2"
+       },
+       {
+        "type": "surface",
+        "label": "68 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano T",
+        "compactLabel": "T"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "3",
+       "value": "3° piano, con ascensore",
+       "floorOnlyValue": "3 piano",
+       "ga4FloorValue": "3 piano"
+      },
+      "price": {
+       "visible": true,
+       "value": 243320,
+       "formattedValue": "€ 243.320",
+       "minValue": "€ 243.320",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "2",
+      "elevator": true,
+      "surface": "79 m²",
+      "typology": {
+       "id": 15,
+       "name": "Attico"
+      },
+      "typologyGA4Translation": "Attico - Mansarda",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone",
+       "terrazzo"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1885798806,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1885798806/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037919/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "2 locali",
+        "compactLabel": "2"
+       },
+       {
+        "type": "surface",
+        "label": "79 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 3",
+        "compactLabel": "3"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "1",
+       "value": "1° piano, con ascensore",
+       "floorOnlyValue": "1 piano",
+       "ga4FloorValue": "1 piano"
+      },
+      "price": {
+       "visible": true,
+       "value": 249040,
+       "formattedValue": "€ 249.040",
+       "minValue": "€ 249.040",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "88 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": true,
+      "photo": {
+       "id": 1591140491,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1591140491/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036483/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "88 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 1",
+        "compactLabel": "1"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "T",
+       "value": "Piano terra, con ascensore",
+       "floorOnlyValue": "piano terra",
+       "ga4FloorValue": "piano terra"
+      },
+      "price": {
+       "visible": true,
+       "value": 258160,
+       "formattedValue": "€ 258.160",
+       "minValue": "€ 258.160",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "87 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1863296151,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1863296151/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17035939/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "87 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano T",
+        "compactLabel": "T"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "1",
+       "value": "1° piano, con ascensore",
+       "floorOnlyValue": "1 piano",
+       "ga4FloorValue": "1 piano"
+      },
+      "price": {
+       "visible": true,
+       "value": 268850,
+       "formattedValue": "€ 268.850",
+       "minValue": "€ 268.850",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "95 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1591144049,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1591144049/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036517/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "95 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 1",
+        "compactLabel": "1"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "T",
+       "value": "Piano terra, con ascensore",
+       "floorOnlyValue": "piano terra",
+       "ga4FloorValue": "piano terra"
+      },
+      "price": {
+       "visible": true,
+       "value": 274600,
+       "formattedValue": "€ 274.600",
+       "minValue": "€ 274.600",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "95 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1591117925,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1591117925/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036023/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "95 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano T",
+        "compactLabel": "T"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2° piano, con ascensore",
+       "floorOnlyValue": "2 piano",
+       "ga4FloorValue": "2 piano"
+      },
+      "price": {
+       "visible": true,
+       "value": 280250,
+       "formattedValue": "€ 280.250",
+       "minValue": "€ 280.250",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "95 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1591211537,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1591211537/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037595/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "95 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "1",
+       "value": "1° piano, con ascensore",
+       "floorOnlyValue": "1 piano",
+       "ga4FloorValue": "1 piano"
+      },
+      "price": {
+       "visible": true,
+       "value": 308470,
+       "formattedValue": "€ 308.470",
+       "minValue": "€ 308.470",
+       "priceRange": "300.001 - 500.000 &euro;"
+      },
+      "rooms": "4",
+      "elevator": true,
+      "surface": "109 m²",
+      "typology": {
+       "id": 14,
+       "name": "Quadrilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "terrazzo"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1593037573,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1593037573/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036189/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "surface",
+        "label": "109 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 1",
+        "compactLabel": "1"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "3",
+       "value": "3° piano, con ascensore",
+       "floorOnlyValue": "3 piano",
+       "ga4FloorValue": "3 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "95 m²",
+      "typology": {
+       "id": 15,
+       "name": "Attico"
+      },
+      "typologyGA4Translation": "Attico - Mansarda",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1835485459,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1835485459/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037887/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "95 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 3",
+        "compactLabel": "3"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "3",
+       "value": "3° piano, con ascensore",
+       "floorOnlyValue": "3 piano",
+       "ga4FloorValue": "3 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "99 m²",
+      "typology": {
+       "id": 15,
+       "name": "Attico"
+      },
+      "typologyGA4Translation": "Attico - Mansarda",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone",
+       "terrazzo"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1984965750,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1984965750/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037849/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "99 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 3",
+        "compactLabel": "3"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "3",
+       "value": "3° piano, con ascensore",
+       "floorOnlyValue": "3 piano",
+       "ga4FloorValue": "3 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "4",
+      "elevator": true,
+      "surface": "127 m²",
+      "typology": {
+       "id": 15,
+       "name": "Attico"
+      },
+      "typologyGA4Translation": "Attico - Mansarda",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone",
+       "terrazzo"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1962990326,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1962990326/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037821/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "surface",
+        "label": "127 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 3",
+        "compactLabel": "3"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2° piano, con ascensore",
+       "floorOnlyValue": "2 piano",
+       "ga4FloorValue": "2 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "2",
+      "elevator": true,
+      "surface": "67 m²",
+      "typology": {
+       "id": 14,
+       "name": "Bilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1912821648,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1912821648/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037667/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "2 locali",
+        "compactLabel": "2"
+       },
+       {
+        "type": "surface",
+        "label": "67 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2° piano, con ascensore",
+       "floorOnlyValue": "2 piano",
+       "ga4FloorValue": "2 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "88 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1962994978,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1962994978/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037549/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "88 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2° piano, con ascensore",
+       "floorOnlyValue": "2 piano",
+       "ga4FloorValue": "2 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "4",
+      "elevator": true,
+      "surface": "113 m²",
+      "typology": {
+       "id": 14,
+       "name": "Quadrilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone",
+       "terrazzo"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1835485429,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1835485429/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17037275/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "surface",
+        "label": "113 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "1",
+       "value": "1° piano, con ascensore",
+       "floorOnlyValue": "1 piano",
+       "ga4FloorValue": "1 piano"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "2",
+      "elevator": true,
+      "surface": "67 m²",
+      "typology": {
+       "id": 14,
+       "name": "Bilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "balcone"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1984968308,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1984968308/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036555/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "2 locali",
+        "compactLabel": "2"
+       },
+       {
+        "type": "surface",
+        "label": "67 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 1",
+        "compactLabel": "1"
+       }
+      ]
+     },
+     {
+      "multimedia": null,
+      "bathrooms": "2",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "T",
+       "value": "Piano terra, con ascensore",
+       "floorOnlyValue": "piano terra",
+       "ga4FloorValue": "piano terra"
+      },
+      "price": {
+       "visible": false,
+       "formattedValue": "prezzo su richiesta",
+       "priceRange": "Prezzo su richiesta"
+      },
+      "rooms": "4",
+      "elevator": true,
+      "surface": "139 m²",
+      "typology": {
+       "id": 14,
+       "name": "Quadrilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "accesso per disabili",
+       "terrazzo"
+      ],
+      "ga4Heating": "Assente",
+      "matchSearch": false,
+      "photo": {
+       "id": 1984971252,
+       "caption": "Planimetria",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1984971252/xxs-c.jpg"
+       }
+      },
+      "url": "/annunci/115369753/17036127/",
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "surface",
+        "label": "139 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "2 bagni",
+        "compactLabel": "2"
+       },
+       {
+        "type": "floor",
+        "label": "Piano T",
+        "compactLabel": "T"
+       }
+      ]
+     }
+    ],
+    "propertiesCount": 16,
+    "title": "Attici e Appartamenti di nuova costruzione a Moncalieri",
+    "type": "ad",
+    "typology": {
+     "id": 276,
+     "name": "Progetto"
+    },
+    "hasMainProperty": true,
+    "isProjectLike": true,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Attici e Appartamenti di nuova costruzione a Moncalieri",
+    "url": "https://www.immobiliare.it/annunci/115369753/"
+   },
+   "idGeoHash": "u0j2n3b5",
+   "_fixture": "project"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 123209499,
+    "uuid": "a3a72113-27db-5f13-bfbb-2ef95818ff33",
+    "advertiser": {
+     "agency": {
+      "id": 128861,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1980 1325"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "GIEFFE PATRIMONI Real Estate Advisor, Torino - Londra - Alba - Milano - Roma - Monza.",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1664754803.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1664754805.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/128861/gieffe-patrimoni-torino/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1980 1325"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "Gerardo Festa",
+      "label": "agente immobiliare",
+      "imageUrl": "https://pic.im-cdn.it/agenti/416531/1830248835/80.jpg"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 180000,
+     "formattedValue": "€ 180.000",
+     "priceRange": "150.001 - 200.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1783114925,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1783114925/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1783114149,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1783114149/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [
+        null
+       ],
+       "hasMultimedia": true
+      },
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2°, con ascensore",
+       "floorOnlyValue": "2",
+       "ga4FloorValue": "2"
+      },
+      "ga4Condition": "Ottimo / Ristrutturato",
+      "price": {
+       "visible": true,
+       "value": 180000,
+       "formattedValue": "€ 180.000",
+       "priceRange": "150.001 - 200.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "100 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "ga4Garage": "1 in box privato/box in garage",
+      "typologyGA4Translation": "Appartamento",
+      "views": [
+       {
+        "id": 9,
+        "name": "db_feature.view.id_9"
+       }
+      ],
+      "ga4features": [
+       "cancello elettrico",
+       "fibra ottica",
+       "impianto di allarme",
+       "porta blindata",
+       "accesso per disabili",
+       "balcone",
+       "terrazzo",
+       "impianto tv centralizzato",
+       "cantina",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Centralizzato",
+      "caption": "Moncalieri, Nasi. Appartamento trilocale. Via G.Deledda 19.",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "Moncalieri, zona Nasi. Appartamento in ottimo contesto curato e tranquillo.\nSituato in uno stabile del 1960, rinnovato nelle parti comuni e con ascensore, l'appartamento offre un’atmosfera luminosa, ariosa e accogliente, ideale per chi desidera vivere in un contesto tranquillo e ben servito. L’immobile ristrutturato, è distribuito in ingresso ampio con accesso su soggiorno spazioso e luminoso, con",
+      "photo": {
+       "id": 1783114925,
+       "caption": "Facciata",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1783114925/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1783114925/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1783114925/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "1",
+      "location": {
+       "address": "Via Grazia Deledda",
+       "latitude": 44.9968,
+       "longitude": 7.7011,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Centro Storico, Vittoria, Aje, Nasi",
+       "microzone": "Nasi",
+       "city": "Moncalieri",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "100 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       },
+       {
+        "type": "elevator",
+        "label": "Ascensore",
+        "compactLabel": "Sì"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "terrace",
+        "label": "Terrazzo"
+       },
+       {
+        "type": "basement",
+        "label": "Cantina"
+       }
+      ]
+     }
+    ],
+    "title": "Trilocale via Grazia Deledda 19, Nasi, Moncalieri",
+    "type": "ad",
+    "typology": {
+     "id": 14,
+     "name": "Trilocale"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Trilocale via Grazia Deledda 19, Nasi, Moncalieri",
+    "url": "https://www.immobiliare.it/annunci/123209499/"
+   },
+   "idGeoHash": "spvrzprv",
+   "_fixture": "other_city"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 131254760,
+    "uuid": "bcd89996-b943-5c66-a07c-20dcd40967eb",
+    "advertiser": {
+     "agency": {
+      "id": 15909,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1988 4536"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "Dimensionecasa",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1451803509.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1451803511.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/15909/dimensione-casa-torino-via-nizza/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1988 4536"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "Dimensionecasa Immobiliare",
+      "label": "agente immobiliare"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 235000,
+     "formattedValue": "€ 235.000",
+     "priceRange": "200.001 - 300.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1977409836,
+         "caption": "Ingresso",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1977409836/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1977409810,
+         "caption": "Ingresso",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1977409810/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [
+        null
+       ],
+       "hasMultimedia": true
+      },
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "2",
+       "value": "2°, con ascensore",
+       "floorOnlyValue": "2",
+       "ga4FloorValue": "2"
+      },
+      "ga4Condition": "Buono / Abitabile",
+      "price": {
+       "visible": true,
+       "value": 235000,
+       "formattedValue": "€ 235.000",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "4",
+      "elevator": true,
+      "surface": "109 m²",
+      "typology": {
+       "id": 14,
+       "name": "Quadrilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "fibra ottica",
+       "armadio a muro",
+       "balcone",
+       "impianto tv centralizzato",
+       "cantina",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Centralizzato",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "CORSO PESCHIERA - PRESSI CORSO TRAPANI - Nel cuore di una delle zone più dinamiche e comode della città, ricca di servizi di ogni genere quali supermercati e negozi di prima necessità a pochi passi a piedi e quindi collegata molto bene dai trasporti pubblici, proponiamo in vendita all'interno di uno stabile del 1954, ben curato e ben tenuto nelle sue parti comuni, uno spazioso e luminoso appartame",
+      "photo": {
+       "id": 1977409836,
+       "caption": "Ingresso",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1977409836/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1977409836/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1977409836/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "1",
+      "location": {
+       "address": "Corso Peschiera",
+       "latitude": 45.0683,
+       "longitude": 7.6408,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Borgo San Paolo, Cenisia",
+       "microzone": "Cenisia",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "surface",
+        "label": "109 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 2",
+        "compactLabel": "2"
+       },
+       {
+        "type": "elevator",
+        "label": "Ascensore",
+        "compactLabel": "Sì"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "basement",
+        "label": "Cantina"
+       }
+      ]
+     }
+    ],
+    "title": "Quadrilocale corso Peschiera 234, Cenisia, Torino",
+    "type": "ad",
+    "typology": {
+     "id": 14,
+     "name": "Quadrilocale"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Quadrilocale corso Peschiera 234, Cenisia, Torino",
+    "url": "https://www.immobiliare.it/annunci/131254760/"
+   },
+   "idGeoHash": "u0j2mu7v",
+   "_fixture": "target_cenisia"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 131063726,
+    "uuid": "cadfacfb-566f-5024-8e28-a622431466df",
+    "advertiser": {
+     "agency": {
+      "id": 6656,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4363"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "Il Mattone Immobiliare",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1163889330.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1163889332.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/6656/il-mattone-torino/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1852 4363"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "ANDREA MUSSO",
+      "label": "agente immobiliare"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 219000,
+     "formattedValue": "€ 219.000",
+     "priceRange": "200.001 - 300.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1972274488,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1972274488/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1972274348,
+         "caption": "Cucina",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1972274348/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [],
+       "hasMultimedia": true
+      },
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "S, 4, 6",
+       "value": "3 piani: Interrato (-1), 4°, 6°, con ascensore",
+       "floorOnlyValue": "interrato (-1), 4, 6",
+       "ga4FloorValue": "interrato (-1), 4, 6"
+      },
+      "ga4Condition": "Ottimo / Ristrutturato",
+      "price": {
+       "visible": true,
+       "value": 219000,
+       "formattedValue": "€ 219.000",
+       "priceRange": "200.001 - 300.000 &euro;"
+      },
+      "rooms": "3",
+      "elevator": true,
+      "surface": "92 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "mansarda",
+       "fibra ottica",
+       "porta blindata",
+       "armadio a muro",
+       "balcone",
+       "impianto tv centralizzato",
+       "arredato",
+       "cantina",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Centralizzato",
+      "caption": "VIA OSOPPO (C.SO SIRACUSA)- TRILOCALE PIANO ALTO",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "in stabile anni '70 proponiamo un appartamento al 4 piano con ascensore composto da ampio ingresso, soggiorno con angolo cottura, due camere da letto, ripostiglio, bagno, due balconi.\nl'immobile ha una metratura pari a 84 mq ed e' stato ristrutturato due anni fa (no porte interne); infissi in doppio vetro/pvc, ogni stanza e' climatizzata.\nottima esposzione poiche' sia lato strada che lato cortile ",
+      "photo": {
+       "id": 1972274488,
+       "caption": "Facciata",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1972274488/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1972274488/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1972274488/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "2",
+      "location": {
+       "address": "Via Osoppo",
+       "latitude": 45.0519,
+       "longitude": 7.6361,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Santa Rita, Mirafiori Nord",
+       "microzone": "Santa Rita",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "92 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano S, 4, 6",
+        "compactLabel": "S, 4, 6"
+       },
+       {
+        "type": "elevator",
+        "label": "Ascensore",
+        "compactLabel": "Sì"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "furniture",
+        "label": "Arredato"
+       },
+       {
+        "type": "basement",
+        "label": "Cantina"
+       }
+      ]
+     }
+    ],
+    "title": "Trilocale via Osoppo 44, Santa Rita, Torino",
+    "type": "ad",
+    "typology": {
+     "id": 14,
+     "name": "Trilocale"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Trilocale via Osoppo 44, Santa Rita, Torino",
+    "url": "https://www.immobiliare.it/annunci/131063726/"
+   },
+   "idGeoHash": "u0j2mc2q",
+   "_fixture": "multi_floor"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 128153496,
+    "uuid": "67fc59ae-f703-50fe-ae7a-db32842ad2b6",
+    "advertiser": {
+     "agency": {
+      "id": 383724,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1988 2314"
+       }
+      ],
+      "bookableVisit": {
+       "isVisitBookable": true,
+       "virtualVisitEnabled": true
+      },
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "Gabetti Franchising Torino - Borgo Vittoria",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1395985961.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1395985965.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/383724/gabetti-torino-borgo-vittoria/",
+      "showExternalLink": false
+     },
+     "supervisor": {
+      "type": "agent",
+      "imageGender": "male",
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1988 2314"
+       }
+      ],
+      "imageType": "agent",
+      "displayName": "Gianluca Diomedes",
+      "label": "agente immobiliare"
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "sale",
+    "isNew": false,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 129900,
+     "formattedValue": "€ 129.900",
+     "priceRange": "100.001 - 150.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1901691084,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1901691084/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1901691080,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1901691080/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [
+        null
+       ],
+       "hasMultimedia": true
+      },
+      "bathrooms": "1",
+      "isMain": false,
+      "floor": {
+       "abbreviation": "1",
+       "value": "1°",
+       "floorOnlyValue": "1",
+       "ga4FloorValue": "1"
+      },
+      "ga4Condition": "Buono / Abitabile",
+      "price": {
+       "visible": true,
+       "value": 129900,
+       "formattedValue": "€ 129.900",
+       "priceRange": "100.001 - 150.000 &euro;"
+      },
+      "rooms": "3",
+      "surface": "85 m²",
+      "typology": {
+       "id": 14,
+       "name": "Trilocale"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "fibra ottica",
+       "porta blindata",
+       "balcone",
+       "impianto tv centralizzato",
+       "solo cucina arredata",
+       "cantina",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Autonomo",
+      "caption": "TRILOCALE - CORSO PALERMO 55",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "In Corso Palermo, proponiamo ampio TRILOCALE al primo piano senza ascensore, di uno stabile di 3 piani. L'immobile è così composto: ingresso su disimpegno, bagno, soggiorno con angolo cottura, una comoda camera matrimoniale, uno studiolo, ripostiglio e un balcone verandato. L'alloggio si presenta in buone condizioni. Completa la proprietà una cantina di pertinenza. Per avere maggiori informazioni ",
+      "photo": {
+       "id": 1901691084,
+       "caption": "Facciata",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1901691084/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1901691084/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1901691084/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "2",
+      "location": {
+       "address": "Corso Palermo",
+       "latitude": 45.0832,
+       "longitude": 7.6928,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Aurora, Barriera di Milano, Rebaudengo",
+       "microzone": "Aurora",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "3 locali",
+        "compactLabel": "3"
+       },
+       {
+        "type": "surface",
+        "label": "85 m²"
+       },
+       {
+        "type": "bathrooms",
+        "label": "1 bagno",
+        "compactLabel": "1"
+       },
+       {
+        "type": "floor",
+        "label": "Piano 1",
+        "compactLabel": "1"
+       },
+       {
+        "type": "elevator",
+        "label": "No Ascensore",
+        "compactLabel": "No"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       },
+       {
+        "type": "furniture",
+        "label": "Solo Cucina Arredata"
+       },
+       {
+        "type": "basement",
+        "label": "Cantina"
+       }
+      ]
+     }
+    ],
+    "title": "Trilocale corso Palermo 55, Aurora, Torino",
+    "type": "ad",
+    "typology": {
+     "id": 14,
+     "name": "Trilocale"
+    },
+    "hasMainProperty": false,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "Trilocale corso Palermo 55, Aurora, Torino",
+    "url": "https://www.immobiliare.it/annunci/128153496/"
+   },
+   "idGeoHash": "u0j2rp1s",
+   "_fixture": "unknown_elevator"
+  },
+  {
+   "realEstate": {
+    "visibility": "supervetrina",
+    "dataType": "list-real-estate",
+    "id": 131912066,
+    "uuid": "a1ad5108-1055-5449-ae2d-5e4e63e4e46d",
+    "advertiser": {
+     "agency": {
+      "id": 465169,
+      "type": "agency",
+      "showOnlyAgentPhone": false,
+      "phones": [
+       {
+        "type": "vTel1",
+        "value": "011 1988 1278"
+       }
+      ],
+      "isPaid": true,
+      "label": "agenzia",
+      "displayName": "ilCentroServizi - Aste Immobiliari",
+      "guaranteed": false,
+      "showAgentPhone": false,
+      "showLogo": true,
+      "imageUrls": {
+       "small": "https://pic.im-cdn.it/imagenoresize/1834700191.jpg",
+       "large": "https://pic.im-cdn.it/imagenoresize/1834700193.jpg"
+      },
+      "agencyUrl": "https://www.immobiliare.it/agenzie-immobiliari/465169/centro-servizi-aste/",
+      "showExternalLink": false
+     },
+     "hasCallNumbers": true
+    },
+    "contract": "auction",
+    "isNew": true,
+    "luxury": false,
+    "price": {
+     "visible": true,
+     "value": 84375,
+     "formattedValue": "€ 84.375,00",
+     "priceRange": "oltre 500.000 &euro;"
+    },
+    "properties": [
+     {
+      "multimedia": {
+       "photos": [
+        {
+         "id": 1992832982,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1992832982/xxs-c.jpg"
+         }
+        },
+        {
+         "id": 1992832972,
+         "caption": "Facciata",
+         "urls": {
+          "small": "https://pwm.im-cdn.it/image/1992832972/xxs-c.jpg"
+         }
+        }
+       ],
+       "virtualTours": [],
+       "hasMultimedia": true
+      },
+      "isMain": true,
+      "floor": {
+       "abbreviation": "T",
+       "value": "Piano terra",
+       "floorOnlyValue": "piano terra",
+       "ga4FloorValue": "piano terra"
+      },
+      "ga4Condition": "Buono / Abitabile",
+      "price": {
+       "visible": true,
+       "value": 84375,
+       "formattedValue": "€ 84.375,00",
+       "priceRange": "oltre 500.000 &euro;"
+      },
+      "rooms": "4",
+      "surface": "121 m²",
+      "typology": {
+       "id": 14,
+       "name": "Appartamento"
+      },
+      "typologyGA4Translation": "Appartamento",
+      "ga4features": [
+       "idromassaggio",
+       "impianto di allarme",
+       "videocitofono",
+       "mansarda",
+       "accesso per disabili",
+       "fibra ottica",
+       "cucina",
+       "balcone",
+       "esposizione doppia"
+      ],
+      "ga4Heating": "Autonomo",
+      "caption": "APPARTAMENTO SU PIÙ LIVELLI CON DOPPIO GIARDINO",
+      "category": {
+       "id": 1,
+       "name": "Residenziale"
+      },
+      "description": "Vendesi tramite asta giudiziaria un appartamento situato a Torino in Strada del Villaretto 169, inserito in un contesto residenziale periferico tranquillo e ben collegato ai servizi della zona. L'immobile si sviluppa complessivamente su più livelli, collegati da scala interna, ed è composto al piano terreno da un luminoso soggiorno con cucina a vista in ambiente unico, un servizio igienico e due g",
+      "photo": {
+       "id": 1992832982,
+       "caption": "Facciata",
+       "urls": {
+        "small": "https://pwm.im-cdn.it/image/1992832982/xxs-c.jpg",
+        "medium": "https://pwm.im-cdn.it/image/1992832982/m-c.jpg",
+        "large": "https://pwm.im-cdn.it/image/1992832982/xxl.jpg"
+       }
+      },
+      "bedRoomsNumber": "2",
+      "location": {
+       "address": "Strada Comunale del Villaretto",
+       "latitude": 45.13159943,
+       "longitude": 7.68580008,
+       "marker": "marker",
+       "region": "Piemonte",
+       "province": "Torino",
+       "macrozone": "Barriera di Lanzo, Falchera, Barca, Bertolla",
+       "microzone": "Falchera",
+       "city": "Torino",
+       "nation": {
+        "id": "IT",
+        "name": "Italia"
+       }
+      },
+      "featureList": [
+       {
+        "type": "rooms",
+        "label": "4 locali",
+        "compactLabel": "4"
+       },
+       {
+        "type": "saleDate",
+        "isHighlighted": false,
+        "label": "20/10/2026"
+       },
+       {
+        "type": "surface",
+        "label": "121 m²"
+       },
+       {
+        "type": "floor",
+        "label": "Piano T",
+        "compactLabel": "T"
+       },
+       {
+        "type": "elevator",
+        "label": "No Ascensore",
+        "compactLabel": "No"
+       },
+       {
+        "type": "balcony",
+        "label": "Balcone"
+       }
+      ]
+     }
+    ],
+    "title": "Appartamento all'asta Strada Comunale del Villaretto 169, Torino",
+    "type": "auction",
+    "typology": {
+     "id": 14,
+     "name": "Appartamento"
+    },
+    "hasMainProperty": true,
+    "isProjectLike": false,
+    "isMosaic": true
+   },
+   "seo": {
+    "anchor": "appartamento all'asta Strada Comunale del Villaretto 169, Torino",
+    "url": "https://www.immobiliare.it/annunci/131912066/"
+   },
+   "idGeoHash": "u0j2wzuw",
+   "_fixture": "asta"
+  }
+ ]
+}

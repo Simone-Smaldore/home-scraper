@@ -1,0 +1,7 @@
+-r requirements-scraper.txt
+
+# Local development and tests only: Vercel never installs these.
+uvicorn[standard]==0.52.2
+pytest==9.1.1
+# Starlette's TestClient deprecated plain httpx in favour of httpx2.
+httpx2==2.10.0

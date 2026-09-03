@@ -1,0 +1,15 @@
+# Runtime dependencies of the API. Vercel installs this file from the repository
+# root, so only what the serverless function needs belongs here: the scraper's
+# own libraries are in requirements-scraper.txt and never reach Vercel.
+#
+# Vercel's Python runtime is currently CPython 3.14, so every package with a
+# compiled extension must ship a cp314 manylinux wheel — there is no compiler in
+# the build image to fall back on. That rules out anything released before
+# Python 3.14 landed: psycopg-binary needs >= 3.2.10 and pydantic-core >= 2.35.
+# Check https://pypi.org/project/<name>/#files before lowering any of these.
+fastapi==0.141.1
+pydantic==2.13.4
+pydantic-settings==2.15.0
+sqlalchemy==2.0.52
+psycopg[binary]==3.3.4
+alembic==1.19.1

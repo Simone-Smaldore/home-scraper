@@ -1,0 +1,8 @@
+# What the scraper needs on top of the API: installed by GitHub Actions and on
+# your machine, never by Vercel (the function does not scrape).
+-r requirements.txt
+
+# curl_cffi, not httpx or urllib: Subito sits behind Akamai, which fingerprints
+# the TLS handshake and refuses every pure-Python SSL stack with the very same
+# headers curl gets through with. Impersonating Chrome is the whole point.
+curl_cffi==0.16.3

@@ -1,0 +1,2269 @@
+{
+ "count_all": 1781,
+ "ads": [
+  {
+   "urn": "id:ad:612258928:list:659200649",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "3 LOCALI A TORINO",
+   "body": "Nel cuore del quartiere San Paolo Lancia a Torino, proponiamo un appartamento in vendita di 75 mq, situato al piano medio di un edificio dotato di ASCENSORE, costruito nel 1955. L'immobile si compone di tre locali, offrendo una disposizione funzionale e accogliente. La zona giorno è luminosa e si affaccia su uno dei due balconi, ideale per momenti di relax all'aperto. Il cucinino garantisce pratic",
+   "dates": {
+    "display": "2026-09-02 03:29:37",
+    "expiration": "2027-09-02 03:29:37",
+    "display_iso8601": "2026-09-02T03:29:37.255+0200",
+    "expiration_iso8601": "2027-09-02T03:29:37.255+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:c2334a28-36f8-431f-af86-4d6db24b191b",
+     "base_url": "https://s.sbito.it/img/c2/c2334a28-36f8-431f-af86-4d6db24b191b",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c2/c2334a28-36f8-431f-af86-4d6db24b191b"
+    },
+    {
+     "uri": "imgid:b0d0af76-bb62-4f77-88f3-54aaacd16c17",
+     "base_url": "https://s.sbito.it/img/b0/b0d0af76-bb62-4f77-88f3-54aaacd16c17",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b0/b0d0af76-bb62-4f77-88f3-54aaacd16c17"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "bool",
+     "uri": "/furnished",
+     "label": "Arredato",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "155000",
+       "value": "155000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "3",
+       "value": "3",
+       "weight": 2
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "75",
+       "value": "75 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/elevator",
+     "label": "Ascensore",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/balcony",
+     "label": "Balcone",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "1100",
+       "value": "F",
+       "weight": 5
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "30",
+       "value": "Buono - abitabile",
+       "weight": 3,
+       "description": "Immobile abitabile anche se i materiali non sono recenti e potrebbero presentare segni di usura."
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/nosalesman",
+     "label": "Agenzie/Tmkg",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "4769108",
+    "name": "STUDIO SAN PAOLO d.i.",
+    "phone": "0",
+    "company": true,
+    "type": 1,
+    "shop_id": 29789,
+    "shop_name": "TECNORETE - STUDIO SAN PAOLO"
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-6",
+     "value": "Cenisia/San Paolo",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "latitude": "45.0659065",
+     "longitude": "7.6398657",
+     "zoom": "13"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/3-locali-a-torino-torino-659200649.htm",
+    "mobile": "https://www.subito.it/appartamenti/3-locali-a-torino-torino-659200649.htm"
+   },
+   "_fixture": "target_full"
+  },
+  {
+   "urn": "id:ad:612259445:list:659201204",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Appartamento a Torino Via Livorno 4 locali",
+   "body": "Via Livorno, 5\n\nA COMPLETARE LA PROPRIETA' NELLO STESSO STABILE GARAGE A EURO 20.000.\n\nin zona ben servita, a qualche minuto da Piazza Statuto a dal centro commerciale Ipercoop, proponiamo in vendita quadrilocale sito al terzo piano di uno stabile senza ascensore.\nAl suo interno è così composto: ingresso su ampio disimpegno, cucina abitabile con balcone, tre camere di cui due con affaccio su balco",
+   "dates": {
+    "display": "2026-09-02 03:35:23",
+    "expiration": "2027-09-02 03:35:23",
+    "display_iso8601": "2026-09-02T03:35:23.804+0200",
+    "expiration_iso8601": "2027-09-02T03:35:23.804+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:de20206b-ac0d-43a1-9d46-6ea666c1e0a4",
+     "base_url": "https://s.sbito.it/img/de/de20206b-ac0d-43a1-9d46-6ea666c1e0a4",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/de/de20206b-ac0d-43a1-9d46-6ea666c1e0a4"
+    },
+    {
+     "uri": "imgid:04253b36-4c5a-4b53-8ba3-72b2fb95f885",
+     "base_url": "https://s.sbito.it/img/04/04253b36-4c5a-4b53-8ba3-72b2fb95f885",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/04/04253b36-4c5a-4b53-8ba3-72b2fb95f885"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "179000",
+       "value": "179000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "4",
+       "value": "4",
+       "weight": 3
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "106",
+       "value": "106 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "7",
+       "value": "3",
+       "weight": 6
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "106888712",
+    "name": "Torino - San Donato",
+    "phone": "0",
+    "company": true,
+    "type": 1,
+    "shop_id": 32463,
+    "shop_name": "Tempocasa Studio Immobiliare Aurora D.I."
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-7",
+     "value": "Cit Turin/S.Donato/Campidoglio",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "latitude": "45.083198",
+     "longitude": "7.6669659",
+     "zoom": "8"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/appartamento-a-torino-via-livorno-4-locali-torino-659201204.htm",
+    "mobile": "https://www.subito.it/appartamenti/appartamento-a-torino-via-livorno-4-locali-torino-659201204.htm"
+   },
+   "_fixture": "cit_turin"
+  },
+  {
+   "urn": "id:ad:612297589:list:659411183",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Minolocale zona uni enaudi",
+   "body": "Ottimo investimento a reddito In zona Altamente ricettiva per studenti vendo monolocale arredato con cantina il locale e attualmente locato con scadenza contratto giugno 2027 causa trasferimento",
+   "dates": {
+    "display": "2026-09-03 19:31:36",
+    "expiration": "2027-09-03 19:31:36",
+    "display_iso8601": "2026-09-03T19:31:36.586+0200",
+    "expiration_iso8601": "2027-09-03T19:31:36.586+0200"
+   },
+   "images": [],
+   "images_360": [],
+   "features": [
+    {
+     "type": "bool",
+     "uri": "/garden",
+     "label": "Giardino",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/elevator",
+     "label": "Ascensore",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/balcony",
+     "label": "Balcone",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/available_now",
+     "label": "Disponibilità immediata",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/air_conditioning",
+     "label": "Aria condizionata",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "4",
+       "value": "0",
+       "weight": 3
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "1200",
+       "value": "G",
+       "weight": 4
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "20",
+       "value": "Ottimo - ristrutturato",
+       "weight": 2,
+       "description": "Immobile abitabile oppure ristrutturato con materiali recenti e che non presenta segni di usura se non minimi."
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/nosalesman",
+     "label": "Agenzie/Tmkg",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/last_floor",
+     "label": "Ultimo piano",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/furnished",
+     "label": "Arredato",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/reception",
+     "label": "Servizio portineria",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/multi_level",
+     "label": "Proprietà su più livelli",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "63000",
+       "value": "63000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "28",
+       "value": "28 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "111936822",
+    "name": "L'Osteria Angelo Custode",
+    "company": false,
+    "type": 0
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-9",
+     "value": "Vanchiglia/Regio Parco",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "address": "Via Mongrando, 10153 Torino TO, Italia",
+     "latitude": "45.0720966",
+     "longitude": "7.7091068",
+     "zoom": "16"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/minolocale-zona-uni-enaudi-torino-659411183.htm",
+    "mobile": "https://www.subito.it/appartamenti/minolocale-zona-uni-enaudi-torino-659411183.htm"
+   },
+   "_fixture": "no_elevator"
+  },
+  {
+   "urn": "id:ad:2301058b-40e0-45f3-bd67-0e7be5969a3c:list:658991649",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Trilocale/doppio monolocale ristrutturato ",
+   "body": "Vendesi privatamente (nessuna spesa di agenzia) splendido appartamento di circa 75 mq situato in via Saluzzo, a pochi passi dalla fermata Metro Dante, dagli ospedali e dai poli universitari.\nL'immobile si trova al piano interno cortile: una soluzione che garantisce massima privacy e totale silenzio, pur trovandosi nel cuore di una zona servitissima.\nCaratteristiche principali:\nSuperficie: ~75 mq\nC",
+   "dates": {
+    "display": "2026-09-03 16:33:48",
+    "expiration": "2027-08-31 16:16:03",
+    "display_iso8601": "2026-09-03T16:33:48.155+0200",
+    "expiration_iso8601": "2027-08-31T16:16:03.807+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:b91640ea-6991-4dbb-96a5-94410d46d9eb",
+     "base_url": "https://s.sbito.it/img/b9/b91640ea-6991-4dbb-96a5-94410d46d9eb",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b9/b91640ea-6991-4dbb-96a5-94410d46d9eb"
+    },
+    {
+     "uri": "imgid:f06b9689-c0cc-44d8-ada0-a7f7670aee1c",
+     "base_url": "https://s.sbito.it/img/f0/f06b9689-c0cc-44d8-ada0-a7f7670aee1c",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f0/f06b9689-c0cc-44d8-ada0-a7f7670aee1c"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "400",
+       "value": "A1",
+       "weight": 12
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "20",
+       "value": "Ottimo - ristrutturato",
+       "weight": 2,
+       "description": "Immobile abitabile oppure ristrutturato con materiali recenti e che non presenta segni di usura se non minimi."
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/nosalesman",
+     "label": "Agenzie/Tmkg",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/furnished",
+     "label": "Arredato",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "165000",
+       "value": "165000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "3",
+       "value": "3",
+       "weight": 2
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "75",
+       "value": "75 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/available_now",
+     "label": "Disponibilità immediata",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "2",
+       "value": "2",
+       "weight": 1
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/air_conditioning",
+     "label": "Aria condizionata",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "4",
+       "value": "0",
+       "weight": 3
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "130674417",
+    "name": "",
+    "company": false,
+    "type": 0
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo"
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/trilocale-doppio-monolocale-ristrutturato-torino-658991649.htm",
+    "mobile": "https://www.subito.it/appartamenti/trilocale-doppio-monolocale-ristrutturato-torino-658991649.htm"
+   },
+   "visibility_options": {
+    "gallery": true,
+    "urgent": false,
+    "homepage_recommender": true,
+    "detail_recommender": true
+   },
+   "_fixture": "no_zone"
+  },
+  {
+   "urn": "id:ad:612269370:list:659249535",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Bilocale ristrutturato 50mq Vanchiglia via Napione",
+   "body": "Privato affitta Libero , parzialmente arredato. In palazzo Signorile bilocale composto da camera da letto, living e bagno con antibagno, al piano rialzato. L'appartamento si affaccia sulla corte interna con balcone e pertanto è molto silenzioso. \n Ristrutturato con impianti a norma dispone di scaldabagno elettrico di ultima generazione, tutti i locali hanno superfice finestrata con infissi nuovi. ",
+   "dates": {
+    "display": "2026-09-02 13:40:42",
+    "expiration": "2027-09-02 13:40:42",
+    "display_iso8601": "2026-09-02T13:40:42.675+0200",
+    "expiration_iso8601": "2027-09-02T13:40:42.675+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:bfdcb71b-1add-43f0-9f05-c44ad92a2a9b",
+     "base_url": "https://s.sbito.it/img/bf/bfdcb71b-1add-43f0-9f05-c44ad92a2a9b",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bf/bfdcb71b-1add-43f0-9f05-c44ad92a2a9b"
+    },
+    {
+     "uri": "imgid:4242d934-8f42-49ad-9962-224d6ce36524",
+     "base_url": "https://s.sbito.it/img/42/4242d934-8f42-49ad-9962-224d6ce36524",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/42/4242d934-8f42-49ad-9962-224d6ce36524"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "list",
+     "uri": "/parking",
+     "label": "Parcheggio",
+     "values": [
+      {
+       "key": "4",
+       "value": "Posto bici",
+       "weight": 3
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/garden",
+     "label": "Giardino",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/elevator",
+     "label": "Ascensore",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/balcony",
+     "label": "Balcone",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/available_now",
+     "label": "Disponibilità immediata",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/air_conditioning",
+     "label": "Aria condizionata",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "3",
+       "value": "Rialzato",
+       "weight": 2
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "900",
+       "value": "D",
+       "weight": 7
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "20",
+       "value": "Ottimo - ristrutturato",
+       "weight": 2,
+       "description": "Immobile abitabile oppure ristrutturato con materiali recenti e che non presenta segni di usura se non minimi."
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/nosalesman",
+     "label": "Agenzie/Tmkg",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/last_floor",
+     "label": "Ultimo piano",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/furnished",
+     "label": "Arredato",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/reception",
+     "label": "Servizio portineria",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/multi_level",
+     "label": "Proprietà su più livelli",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "900",
+       "value": "900 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "2",
+       "value": "2",
+       "weight": 1
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "50",
+       "value": "50 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "13054535",
+    "name": "lodovica",
+    "company": false,
+    "type": 0
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-9",
+     "value": "Vanchiglia/Regio Parco",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "address": "Via Giovanni Francesco Napione, 23, 10124 Torino TO, Italia",
+     "latitude": "45.0676267",
+     "longitude": "7.700952200000001",
+     "zoom": "16"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/bilocale-ristrutturato-50mq-vanchiglia-via-napione-torino-659249535.htm",
+    "mobile": "https://www.subito.it/appartamenti/bilocale-ristrutturato-50mq-vanchiglia-via-napione-torino-659249535.htm"
+   },
+   "_fixture": "rialzato"
+  },
+  {
+   "urn": "id:ad:612264190:list:659221317",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Appartamento di 135 m² con 5 locali e box auto a T",
+   "body": "Rif:duca80 (131523690) - IMMOBILIARE LUCE PROPONE IN VENDITA questo ampio appartamento in condizioni originali, offre la possibilità di ristrutturalo a vostro piacere rispettando al meglio le vostre esigenze, situato in una zona tranquilla e riservata nelle vicinanze di aree verdi, negozi, scuole e ospedali. Questo appartamento in stabile signorile , offre un ampio salone con grandi vetrate che in",
+   "dates": {
+    "display": "2026-09-02 10:15:47",
+    "expiration": "2027-09-02 10:15:47",
+    "display_iso8601": "2026-09-02T10:15:47.554+0200",
+    "expiration_iso8601": "2027-09-02T10:15:47.554+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:098c021b-78be-4c71-ac2a-f030f1145e90",
+     "base_url": "https://s.sbito.it/img/09/098c021b-78be-4c71-ac2a-f030f1145e90",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/09/098c021b-78be-4c71-ac2a-f030f1145e90"
+    },
+    {
+     "uri": "imgid:363aed53-c6ff-44ce-a80c-bfe59853494d",
+     "base_url": "https://s.sbito.it/img/36/363aed53-c6ff-44ce-a80c-bfe59853494d",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/36/363aed53-c6ff-44ce-a80c-bfe59853494d"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "285000",
+       "value": "285000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "5",
+       "value": "5",
+       "weight": 4
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "135",
+       "value": "135 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/parking",
+     "label": "Parcheggio",
+     "values": [
+      {
+       "key": "1",
+       "value": "Box privato",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/elevator",
+     "label": "Ascensore",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/balcony",
+     "label": "Balcone",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "2",
+       "value": "2",
+       "weight": 1
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "11",
+       "value": "7",
+       "weight": 10
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "1000",
+       "value": "E",
+       "weight": 6
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "40",
+       "value": "Da ristrutturare",
+       "weight": 4,
+       "description": "Immobile non abitabile o da rimettere a nuovo."
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "103899242",
+    "name": "Immobiliare Luce",
+    "phone": "0",
+    "company": true,
+    "type": 1,
+    "shop_id": 28188,
+    "shop_name": "IMMOBILIARE LUCE"
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-13",
+     "value": "Parella/Pozzo Strada",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "latitude": "45.0692",
+     "longitude": "7.6313",
+     "zoom": "15"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/appartamento-di-135-m²-con-5-locali-e-box-auto-a-t-torino-659221317.htm",
+    "mobile": "https://www.subito.it/appartamenti/appartamento-di-135-m²-con-5-locali-e-box-auto-a-t-torino-659221317.htm"
+   },
+   "_fixture": "box"
+  },
+  {
+   "urn": "id:ad:612277254:list:659297886",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Bilocale mirafiori sud via De Maistre",
+   "body": "Privato vende immobile, zona centrale, adiacente Via Onorato Vigliani e piazza Bengasi (fermata metro).\nComposto da ingresso, cucina, camera spaziosa, bagno, sgabuzzino, cantina, due balconi.\nInfissi esterni in pvc con vetri a doppia camera.\n\nTelefonare ore serali, no agenzie.",
+   "dates": {
+    "display": "2026-09-02 20:01:57",
+    "expiration": "2027-09-02 20:01:57",
+    "display_iso8601": "2026-09-02T20:01:57.824+0200",
+    "expiration_iso8601": "2027-09-02T20:01:57.824+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:f9ba898a-b75b-480f-95b2-423bfe264ef0",
+     "base_url": "https://s.sbito.it/img/f9/f9ba898a-b75b-480f-95b2-423bfe264ef0",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f9/f9ba898a-b75b-480f-95b2-423bfe264ef0"
+    },
+    {
+     "uri": "imgid:4bf1eda8-fa73-4847-9da6-f3764e6798ad",
+     "base_url": "https://s.sbito.it/img/4b/4bf1eda8-fa73-4847-9da6-f3764e6798ad",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/4b/4bf1eda8-fa73-4847-9da6-f3764e6798ad"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "bool",
+     "uri": "/garden",
+     "label": "Giardino",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/elevator",
+     "label": "Ascensore",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/balcony",
+     "label": "Balcone",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/available_now",
+     "label": "Disponibilità immediata",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/air_conditioning",
+     "label": "Aria condizionata",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "8",
+       "value": "4",
+       "weight": 7
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "1100",
+       "value": "F",
+       "weight": 5
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "30",
+       "value": "Buono - abitabile",
+       "weight": 3,
+       "description": "Immobile abitabile anche se i materiali non sono recenti e potrebbero presentare segni di usura."
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/nosalesman",
+     "label": "Agenzie/Tmkg",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/last_floor",
+     "label": "Ultimo piano",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/furnished",
+     "label": "Arredato",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/reception",
+     "label": "Servizio portineria",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/multi_level",
+     "label": "Proprietà su più livelli",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "76000",
+       "value": "76000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "2",
+       "value": "2",
+       "weight": 1
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "60",
+       "value": "60 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "105082321",
+    "name": "luigi",
+    "company": false,
+    "type": 0
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-14",
+     "value": "Mirafiori",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "address": "Via Fratelli de Maistre, 33, 10127 Torino TO, Italia",
+     "latitude": "45.0147982",
+     "longitude": "7.653236100000001",
+     "zoom": "16"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/bilocale-mirafiori-sud-via-de-maistre-torino-659297886.htm",
+    "mobile": "https://www.subito.it/appartamenti/bilocale-mirafiori-sud-via-de-maistre-torino-659297886.htm"
+   },
+   "_fixture": "private"
+  },
+  {
+   "urn": "id:ad:601908270:list:615274504",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "Torino - Corso Potenza - euro 69.000,00",
+   "body": "Investimento a reddito con vista su Superga\nIn Corso Potenza, tra i quartieri Borgo Vittoria, Lucento e Madonna di Campagna, proponiamo in vendita appartamento di circa 55 mq, posto al 4° ed ultimo piano con ascensore.\n\nLa posizione è comoda ai servizi e ottimamente collegata al centro città: in auto si raggiunge in circa 15 minuti, mentre con i mezzi pubblici (tram 3 e 9) in 20/25 minuti. Vicina ",
+   "dates": {
+    "display": "2026-09-03 13:43:18",
+    "expiration": "2026-09-06 10:32:29",
+    "display_iso8601": "2026-09-03T13:43:18.505+0200",
+    "expiration_iso8601": "2026-09-06T10:32:29.059+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:6b1a8557-dcc9-4445-ab96-2fd9cd94ceec",
+     "base_url": "https://s.sbito.it/img/6b/6b1a8557-dcc9-4445-ab96-2fd9cd94ceec",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/6b/6b1a8557-dcc9-4445-ab96-2fd9cd94ceec"
+    },
+    {
+     "uri": "imgid:246ac9ab-a95b-427d-8e5d-b862b035c37c",
+     "base_url": "https://s.sbito.it/img/24/246ac9ab-a95b-427d-8e5d-b862b035c37c",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/24/246ac9ab-a95b-427d-8e5d-b862b035c37c"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "bool",
+     "uri": "/balcony",
+     "label": "Balcone",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/available_now",
+     "label": "Disponibilità immediata",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "1",
+       "value": "1",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/air_conditioning",
+     "label": "Aria condizionata",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "8",
+       "value": "4",
+       "weight": 7
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/energy_class",
+     "label": "Classe energetica",
+     "values": [
+      {
+       "key": "1200",
+       "value": "G",
+       "weight": 4
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/building_condition",
+     "label": "Stato",
+     "values": [
+      {
+       "key": "40",
+       "value": "Da ristrutturare",
+       "weight": 4,
+       "description": "Immobile non abitabile o da rimettere a nuovo."
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/nosalesman",
+     "label": "Agenzie/Tmkg",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/last_floor",
+     "label": "Ultimo piano",
+     "values": [
+      {
+       "key": "1",
+       "value": "Sì"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/furnished",
+     "label": "Arredato",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/reception",
+     "label": "Servizio portineria",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/multi_level",
+     "label": "Proprietà su più livelli",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "69000",
+       "value": "69000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "2",
+       "value": "2",
+       "weight": 1
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "55",
+       "value": "55 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/heating",
+     "label": "Riscaldamento",
+     "values": [
+      {
+       "key": "1",
+       "value": "Centralizzato",
+       "weight": 0
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/garden",
+     "label": "Giardino",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    },
+    {
+     "type": "bool",
+     "uri": "/elevator",
+     "label": "Ascensore",
+     "values": [
+      {
+       "key": "0",
+       "value": "No"
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "18109070",
+    "name": "FRIMM di Viale Garibaldi, 21",
+    "phone": "0",
+    "company": true,
+    "type": 1,
+    "shop_id": 15288,
+    "shop_name": "FRIMM di Viale Garibaldi, 21"
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-11",
+     "value": "Madonna di Campagna/B.Vittoria",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo",
+    "map": {
+     "address": "Corso Potenza, 113, 10121 Torino TO, Italia",
+     "latitude": "45.0983199",
+     "longitude": "7.6584814",
+     "zoom": "16"
+    }
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/torino-corso-potenza-euro-69-000-00-torino-615274504.htm",
+    "mobile": "https://www.subito.it/appartamenti/torino-corso-potenza-euro-69-000-00-torino-615274504.htm"
+   },
+   "_fixture": "da_ristrutturare"
+  },
+  {
+   "urn": "id:ad:612281734:list:659321421",
+   "type": {
+    "key": "s",
+    "value": "In vendita",
+    "weight": 0
+   },
+   "category": {
+    "key": "7",
+    "value": "Appartamenti",
+    "friendly_name": "appartamenti",
+    "macrocategory_id": "6",
+    "weight": 9
+   },
+   "subject": "UN'ABITAZIONE UNICA, DA SCOPRIRE DI PERSONA",
+   "body": "La Tempocasa di Mirafiori Sud Traiano propone in vendita una soluzione esclusiva, pensata per chi è alla ricerca di un immobile fuori dagli schemi, caratterizzato da ampi spazi e da una distribuzione interna che garantisce comfort e funzionalità.\nSi tratta di una proposta riservata: per questo motivo l'indirizzo dell'immobile non è indicato nell'annuncio e le fotografie degli interni sono state ap",
+   "dates": {
+    "display": "2026-09-03 03:38:44",
+    "expiration": "2027-09-03 03:38:44",
+    "display_iso8601": "2026-09-03T03:38:44.866+0200",
+    "expiration_iso8601": "2027-09-03T03:38:44.866+0200"
+   },
+   "images": [
+    {
+     "uri": "imgid:fb9e68f9-e65f-4614-9200-b1d6476df77c",
+     "base_url": "https://s.sbito.it/img/fb/fb9e68f9-e65f-4614-9200-b1d6476df77c",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fb/fb9e68f9-e65f-4614-9200-b1d6476df77c"
+    },
+    {
+     "uri": "imgid:3ed4b170-5b4d-4b8d-92f6-2abdb58e4987",
+     "base_url": "https://s.sbito.it/img/3e/3ed4b170-5b4d-4b8d-92f6-2abdb58e4987",
+     "cdn_base_url": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3e/3ed4b170-5b4d-4b8d-92f6-2abdb58e4987"
+    }
+   ],
+   "images_360": [],
+   "features": [
+    {
+     "type": "number",
+     "uri": "/price",
+     "label": "Prezzo",
+     "values": [
+      {
+       "key": "349000",
+       "value": "349000 €"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/room",
+     "label": "Locali",
+     "values": [
+      {
+       "key": "5",
+       "value": "5",
+       "weight": 4
+      }
+     ]
+    },
+    {
+     "type": "number",
+     "uri": "/size",
+     "label": "Superficie",
+     "values": [
+      {
+       "key": "150",
+       "value": "150 mq"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/bathrooms",
+     "label": "Bagni",
+     "values": [
+      {
+       "key": "2",
+       "value": "2",
+       "weight": 1
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "uri": "/floor",
+     "label": "Piano",
+     "values": [
+      {
+       "key": "5",
+       "value": "1",
+       "weight": 4
+      }
+     ]
+    }
+   ],
+   "advertiser": {
+    "user_id": "105008616",
+    "name": "Torino - Mirafiori-Sud Traiano",
+    "phone": "0",
+    "company": true,
+    "type": 1,
+    "shop_id": 32248,
+    "shop_name": "Tempocasa Mirafiori Consulting S.r.l"
+   },
+   "geo": {
+    "region": {
+     "key": "2",
+     "uri": "/region",
+     "value": "Piemonte",
+     "friendly_name": "piemonte",
+     "label": "Regione",
+     "level": 0,
+     "neighbors": "2,1,3,4,8"
+    },
+    "city": {
+     "key": "6",
+     "uri": "/city",
+     "value": "Torino",
+     "label": "Provincia",
+     "friendly_name": "torino",
+     "short_name": "TO",
+     "level": 1,
+     "istat": "001",
+     "region_id": "2"
+    },
+    "town": {
+     "key": "001272",
+     "uri": "/town",
+     "value": "Torino",
+     "label": "Comune",
+     "level": 2,
+     "istat": "001272",
+     "region_id": "2",
+     "city_id": "6",
+     "has_zone": true,
+     "friendly_name": "torino",
+     "lat": 45.073289,
+     "lon": 7.680696
+    },
+    "zone": {
+     "key": "001272-14",
+     "value": "Mirafiori",
+     "level": 3,
+     "label": "Zona",
+     "region_id": "2",
+     "city_id": "6",
+     "town_id": "001272",
+     "uri": "/zone"
+    },
+    "uri": "/geo",
+    "label": "Comune",
+    "type": "geo"
+   },
+   "urls": {
+    "default": "https://www.subito.it/appartamenti/un-abitazione-unica-da-scoprire-di-persona-torino-659321421.htm",
+    "mobile": "https://www.subito.it/appartamenti/un-abitazione-unica-da-scoprire-di-persona-torino-659321421.htm"
+   },
+   "_fixture": "out_of_zone_big"
+  }
+ ]
+}
