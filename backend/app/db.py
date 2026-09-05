@@ -46,15 +46,16 @@ def get_engine() -> Engine:
     if not settings.database_url:
         raise DatabaseNotConfigured("DATABASE_URL non è configurata")
 
+    url = normalize_database_url(settings.database_url)
+
     # NullPool: every serverless invocation is short-lived and Neon's pooled
     # endpoint already runs pgbouncer. Holding a local pool would keep
     # connections open across cold starts and exhaust the free tier.
-    return create_engine(
-        normalize_database_url(settings.database_url),
-        poolclass=NullPool,
-        pool_pre_ping=True,
-        connect_args={"connect_timeout": 10},
-    )
+    #
+    # connect_timeout is psycopg's; SQLite (used to rehearse the scraper
+    # end-to-end without touching Neon) rejects it.
+    connect_args = {"connect_timeout": 10} if url.startswith("postgresql") else {}
+    return create_engine(url, poolclass=NullPool, pool_pre_ping=True, connect_args=connect_args)
 
 
 @lru_cache

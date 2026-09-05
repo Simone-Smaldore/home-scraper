@@ -1,12 +1,22 @@
-"""The runner: fetch listings from the sources and apply the hard filter.
+"""The runner: fetch listings from the sources, filter, store.
 
-    python -m scripts.scrape --source subito --dry-run --no-llm
-    python -m scripts.scrape --source subito --dry-run --no-llm --pages 5
-    python -m scripts.scrape --source subito --dry-run --no-llm --all --show-rejected
+    python -m scripts.scrape                    # incremental: stops at the first page of known ads
+    python -m scripts.scrape --full             # every page; the only run that can declare an ad gone
+    python -m scripts.scrape --source subito
+    python -m scripts.scrape --dry-run --no-llm --pages 2 [--show-rejected]   # no database at all
 
-M0 shape: dry run only — nothing is written anywhere, the listings are printed
-with the filter's verdict. Persistence (M1) and the LLM evaluation (M2) plug in
-here, around the same loop.
+Two kinds of run, and the difference is not cosmetic. An incremental run reads
+newest-first and stops at the first page made entirely of ids it already has,
+so it cannot know what disappeared further down. A full run walks everything
+and is therefore the only one allowed to bump `missed_runs` and deactivate.
+The morning cron is full, the evening one incremental.
+
+Each source gets its own ScrapeRun row and its own try/except: a block on one
+site must not cost the other its run. A block or an error ends that source's
+walk without deactivating anything — an ad you did not get to see is not an
+ad that is gone.
+
+The LLM evaluation (--no-llm to skip) plugs in here at M2.
 """
 
 from __future__ import annotations
@@ -15,18 +25,26 @@ import argparse
 import logging
 import sys
 from collections import Counter
+from datetime import datetime, timezone
 
+from app.db import get_session_factory
 from app.domain.criteria import CRITERIA, check
 from app.domain.format import eur, sqm
 from app.domain.listing import Listing
 from app.domain.vocabulary import Garage, SourceName
+from app.models import ScrapeRun
 from app.sources.base import Blocked, ListingSource, PoliteClient, SourceError
 from app.sources.immobiliare import ImmobiliareSource
 from app.sources.subito import SubitoSource
+from app.store.listings import known_ids, mark_missing, upsert
+from scripts._common import Abort, announce, plural
 
 # Pages to read in a dry run unless --all is given: enough to see the filter at
 # work, few enough to stay polite while iterating on it.
 DRY_RUN_PAGES = 2
+
+# Commit every so many ads so a block halfway through keeps what came before.
+COMMIT_EVERY = 50
 
 
 def build_source(name: SourceName, client: PoliteClient) -> ListingSource:
@@ -60,6 +78,74 @@ def describe(listing: Listing) -> str:
     if listing.phone:
         parts.append(f"tel. {listing.phone}")
     return " · ".join(parts)
+
+
+# --- the real run -----------------------------------------------------------
+
+
+def run_source(source: ListingSource, *, full: bool, max_pages: int | None) -> ScrapeRun:
+    """One source, one ScrapeRun row, its own transaction boundary."""
+    now = datetime.now(timezone.utc)
+    factory = get_session_factory()
+    run = ScrapeRun(source=source.name, started_at=now, full=full, status="ok")
+
+    with factory() as db:
+        db.add(run)
+        db.commit()
+
+        known = set() if full else known_ids(db, source.name)
+        seen: set[str] = set()
+        counts: Counter[str] = Counter()
+
+        try:
+            for listing in source.fetch(is_known=lambda i: i in known, max_pages=max_pages):
+                verdict = check(listing, CRITERIA)
+                result = upsert(db, listing, verdict, now)
+                seen.add(listing.source_id)
+                counts["fetched"] += 1
+                counts["new" if result.created else "updated"] += 1
+                counts["price_changes"] += result.price_changed
+                counts["passing"] += verdict.passes
+                if counts["fetched"] % COMMIT_EVERY == 0:
+                    db.commit()
+            if full:
+                counts["deactivated"] = mark_missing(db, source.name, seen)
+        except Blocked as exc:
+            run.status = "blocked"
+            run.error = str(exc)
+        except SourceError as exc:
+            run.status = "failed"
+            run.error = str(exc)
+
+        run.fetched = counts["fetched"]
+        run.new = counts["new"]
+        run.updated = counts["updated"]
+        run.price_changes = counts["price_changes"]
+        run.deactivated = counts["deactivated"]
+        run.finished_at = datetime.now(timezone.utc)
+        db.commit()
+        db.refresh(run)
+
+    _report(run, counts["passing"])
+    return run
+
+
+def _report(run: ScrapeRun, passing: int) -> None:
+    kind = "completo" if run.full else "incrementale"
+    print(f"\n{run.source} — giro {kind}")
+    if run.status != "ok":
+        label = "BLOCCATO" if run.status == "blocked" else "ERRORE"
+        print(f"  {label}: {run.error}")
+    print(f"  letti {run.fetched} · nuovi {run.new} · aggiornati {run.updated}")
+    print(f"  {plural(run.price_changes, 'prezzo cambiato', 'prezzi cambiati')}")
+    print(f"  passano il filtro (fra i letti): {passing}")
+    if run.full:
+        print(f"  {plural(run.deactivated, 'annuncio sparito', 'annunci spariti')}")
+    seconds = (run.finished_at - run.started_at).total_seconds() if run.finished_at else 0
+    print(f"  durata {seconds:.0f} s")
+
+
+# --- the dry run ------------------------------------------------------------
 
 
 def dry_run(source: ListingSource, *, max_pages: int | None, show_rejected: bool) -> int:
@@ -128,18 +214,23 @@ def _kind(reason: str) -> str:
     return reason  # "senza ascensore", "senza balcone"
 
 
+# --- entry point ------------------------------------------------------------
+
+
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Raccoglie gli annunci e applica il filtro.")
+    parser = argparse.ArgumentParser(description="Raccoglie gli annunci, li filtra e li salva.")
     parser.add_argument(
         "--source",
         choices=[name.value for name in SourceName],
-        default=SourceName.SUBITO.value,
+        default=None,
+        help="una fonte sola (default: tutte)",
     )
-    parser.add_argument("--dry-run", action="store_true", help="non scrive niente (per ora l'unica modalità)")
-    parser.add_argument("--no-llm", action="store_true", help="salta la valutazione (per ora sempre)")
+    parser.add_argument("--full", action="store_true", help="tutte le pagine; segna chi è sparito")
+    parser.add_argument("--dry-run", action="store_true", help="niente database: stampa e basta")
+    parser.add_argument("--no-llm", action="store_true", help="salta la valutazione (arriva con M2)")
     parser.add_argument("--pages", type=int, default=None, help="quante pagine leggere")
-    parser.add_argument("--all", action="store_true", help="tutte le pagine")
-    parser.add_argument("--show-rejected", action="store_true", help="stampa anche gli scartati")
+    parser.add_argument("--all", action="store_true", help="(dry run) tutte le pagine")
+    parser.add_argument("--show-rejected", action="store_true", help="(dry run) stampa anche gli scartati")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
 
@@ -148,15 +239,31 @@ def main(argv: list[str] | None = None) -> int:
         format="%(levelname)s %(name)s: %(message)s",
     )
 
-    if not args.dry_run:
-        print("Per ora esiste solo --dry-run: la persistenza arriva con M1.")
-        return 1
-
-    max_pages = None if args.all else (args.pages or DRY_RUN_PAGES)
+    names = [SourceName(args.source)] if args.source else list(SourceName)
     client = PoliteClient()
     try:
-        source = build_source(SourceName(args.source), client)
-        return dry_run(source, max_pages=max_pages, show_rejected=args.show_rejected)
+        if args.dry_run:
+            max_pages = None if args.all else (args.pages or DRY_RUN_PAGES)
+            codes = [
+                dry_run(build_source(name, client), max_pages=max_pages, show_rejected=args.show_rejected)
+                for name in names
+            ]
+            return max(codes)
+
+        try:
+            announce(f"Raccolta annunci — giro {'completo' if args.full else 'incrementale'}")
+        except Abort as exc:
+            print(exc)
+            return 1
+        if not args.no_llm:
+            print("valutazione LLM: non ancora disponibile, arriva con M2")
+
+        runs = [
+            run_source(build_source(name, client), full=args.full, max_pages=args.pages)
+            for name in names
+        ]
+        # A blocked or failed source turns the workflow red, which is the alert.
+        return 0 if all(run.status == "ok" for run in runs) else 1
     finally:
         client.close()
 

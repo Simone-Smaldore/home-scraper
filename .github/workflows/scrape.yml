@@ -1,0 +1,58 @@
+# The scraper's cron. Two runs a day against Neon; Vercel is never involved.
+#
+# Times are UTC, so the Italian clock drifts by an hour between summer and
+# winter (07:30/19:30 CEST, 06:30/18:30 CET). Not worth a fix: nothing depends
+# on the exact minute.
+#
+# The morning run is --full: it walks every page and is the only one allowed to
+# declare an ad gone. The evening one is incremental and stops at the first
+# page of known ads. A blocked or failed source exits non-zero, which turns
+# the run red and makes GitHub send the email — that is the alert.
+
+name: scrape
+
+on:
+  schedule:
+    - cron: "30 5 * * *"
+    - cron: "30 17 * * *"
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Giro completo (tutte le pagine, segna chi è sparito)"
+        type: boolean
+        default: false
+
+# Never two runs at once: they would race on the same rows.
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-scraper.txt
+
+      - run: pip install -r requirements-scraper.txt
+
+      - name: Scrape
+        working-directory: backend
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ENVIRONMENT: production
+          PYTHONUTF8: "1"
+        run: |
+          FLAGS=""
+          if [ "${{ github.event.schedule }}" = "30 5 * * *" ] || [ "${{ inputs.full }}" = "true" ]; then
+            FLAGS="--full"
+          fi
+          echo "flags: ${FLAGS:-(incrementale)}"
+          python -m scripts.scrape $FLAGS

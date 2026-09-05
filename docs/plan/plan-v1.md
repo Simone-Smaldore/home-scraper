@@ -293,9 +293,19 @@ tutto il resto:
    su Vercel, `/_stato` verde. Riscrittura di `CLAUDE.md` e `README.md` per questo
    progetto.
 
-**M1 — Persistenza e cron.** Modelli, prima migrazione, `scripts/scrape.py` completo
-(upsert, storico prezzi, disattivazione, `scrape_run`), primo giro a mano su Neon,
-`.github/workflows/scrape.yml` con i due orari, `backup.py`.
+**M1 — Persistenza e cron. ✅ fatto in locale**, da applicare su Neon. Modelli, prima
+migrazione scritta a mano (verificata con `alembic check` su SQLite), `store/listings.py`
+con upsert e ciclo di vita, `scripts/scrape.py` che scrive davvero, workflow con i due
+orari, `backup.py`. Provato end-to-end su un SQLite temporaneo: incrementale → aggiornati,
+completo → spariti dopo due assenze, backup.
+
+Due scostamenti:
+
+- ⚠️ **Due tipi di giro.** Il piano diceva "chi non compare in due giri → inattivo", ma un
+  giro che si ferma alla prima pagina nota non vede chi sta più in là: dichiarare sparito
+  può farlo solo un giro **completo** (`--full`, il mattino); la sera è incrementale.
+- **Subito manda il 429 come un 500** con "[429 Too Many Requests]" nel corpo: successo
+  durante lo sviluppo, dopo una giornata di sondaggi. Trattato come blocco.
 
 **M2 — Valutazione.** `llm/client.py` con la cascata, `prompts/evaluate_v1.md`,
 `domain/evaluation.py` e `domain/pricing.py`, tabella `evaluation`, test sul parsing (JSON

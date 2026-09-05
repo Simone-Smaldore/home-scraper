@@ -1,7 +1,8 @@
 # CLAUDE.md
 
-> Stato: **M0 completa in locale** — Subito e Immobiliare funzionano in prova a vuoto,
-> scheletro (API, `/_stato`, Alembic a vuoto) costruito, da deployare su Vercel.
+> Stato: **M1 completa in locale** — fonti, persistenza, giri completo/incrementale, cron
+> su GitHub Actions, `backup`. Da fare a mano: `alembic upgrade head` su Neon, primo giro,
+> segreti su GitHub, deploy su Vercel.
 >
 > Questo file è la fonte di verità operativa: raccoglie le decisioni prese e **i motivi
 > per cui sono state prese così**. Il piano di progetto in
@@ -47,11 +48,16 @@ python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements-dev.txt
 npm install
 
-# lo scraper, in prova a vuoto — l'unica modalità finché non c'è M1
-cd backend && python -m scripts.scrape --source subito --dry-run --no-llm            # 2 pagine
-cd backend && python -m scripts.scrape --source subito --dry-run --no-llm --all      # tutto Torino
-cd backend && python -m scripts.scrape --source subito --dry-run --no-llm --show-rejected
-cd backend && python -m scripts.scrape --source immobiliare --dry-run --no-llm
+# lo scraper — scrive su DATABASE_URL
+cd backend && python -m scripts.scrape                  # incrementale: si ferma alla prima pagina di annunci noti
+cd backend && python -m scripts.scrape --full           # completo: tutte le pagine, segna chi è sparito
+cd backend && python -m scripts.scrape --source subito  # una fonte sola
+cd backend && python -m scripts.backup [--no-raw]       # esporta tutto in JSON
+
+# lo scraper in prova a vuoto — niente database, stampa e basta
+cd backend && python -m scripts.scrape --dry-run --no-llm --source subito            # 2 pagine
+cd backend && python -m scripts.scrape --dry-run --no-llm --source subito --all      # tutto Torino
+cd backend && python -m scripts.scrape --dry-run --no-llm --source immobiliare --show-rejected
 
 # dev server backend — http://127.0.0.1:8000, docs su /api/docs
 cd backend && uvicorn app.main:app --reload
@@ -82,9 +88,10 @@ Non lanciare comandi che non sono elencati qui senza chiedere prima.
 ```
 backend/app/
   config.py, db.py, main.py    rispecchiati da food-plan-maker
-  models/                      SQLAlchemy (vuoto a M0)
+  models/                      SQLAlchemy: listing + price_history, review, scrape_run
   schemas/                     Pydantic, input e output delle API
   api/                         router HTTP: health (M0), listings/reviews/runs (M3)
+  store/                       ← scrive sul database: l'upsert e il ciclo di vita
   domain/                      ← puro: zero FastAPI, zero SQLAlchemy, zero HTTP
     vocabulary.py                enum chiusi: fonte, zona, box, stato, review
     listing.py                   il Listing normalizzato, comune a tutte le fonti
@@ -96,10 +103,11 @@ backend/app/
     subito.py
     immobiliare.py
   llm/                         (M2) l'unico posto che parla con Gemini
-backend/scripts/scrape.py      il runner
+backend/scripts/               scrape.py (il runner), backup.py, _common.py
 backend/tests/                 pytest; fixtures/ con JSON veri dei siti
 backend/migrations/            Alembic
 frontend/src/                  React + Vite + Tailwind 4; a M0 solo /_stato
+.github/workflows/scrape.yml   il cron: due giri al giorno
 api/index.py                   entrypoint Vercel, monta l'app FastAPI
 requirements.txt               runtime dell'API — la legge Vercel, sta in root
 requirements-scraper.txt       API + curl_cffi — GitHub Actions e la tua macchina
@@ -126,6 +134,10 @@ al runner, che lo registra e passa alla fonte successiva. Martellare un sito che
 detto no è esattamente il comportamento che alza il muro per sempre. Le buone maniere sono
 anche autodifesa: due giri al giorno, pausa di 1–3 s fra le richieste, nessun
 parallelismo, mai una pagina di dettaglio quando l'elenco già dice tutto.
+⚠️ **Subito manda il limite di frequenza come un 500** con dentro `[429 Too Many
+Requests]`: successo il primo giorno, dopo una giornata di sondaggi. `PoliteClient` lo
+riconosce e lo tratta da `Blocked`. Se ti capita in sviluppo, smetti per un'ora: non è un
+bug da riprovare.
 
 **Subito** — `hades.subito.it/v1/search/items`, la stessa API JSON del sito. Nessun
 cookie né token. Cento annunci a richiesta con tutti i campi strutturati, il testo
@@ -161,6 +173,35 @@ case *comparabili*, non del mercato intero. Va bene per il lavoro che deve fare.
 **Le aste si segnalano, non si scartano** (`is_auction`, da `domain/auction.py`, che
 riconosce "all'asta", "asta giudiziaria", "tribunale di" — non la parola "asta" da sola,
 che sta anche in "fantastica").
+
+## Il runner e i due giri
+
+`scripts/scrape.py`. Ogni fonte ha la sua riga in `scrape_run` e il suo `try`: un blocco su
+un sito non costa il giro all'altro. Ogni 50 annunci un commit, così un blocco a metà
+tiene quello che è arrivato prima. Un giro non `ok` fa uscire con codice 1: su GitHub
+Actions il run diventa rosso e la mail arriva — **quello è l'allarme**.
+
+⚠️ **Due tipi di giro, e la differenza non è cosmetica.** L'incrementale legge dal più
+recente e si ferma alla prima pagina fatta solo di id già noti, quindi *non può sapere*
+cosa è sparito più in là. Il completo (`--full`) legge tutto ed è **l'unico autorizzato a
+dichiarare un annuncio sparito**: chi non compare prende `missed_runs += 1`, a 2 diventa
+`is_active = false`. Mai cancellato — è storico, e la mediana di zona lo usa. Ricompare →
+torna attivo e il contatore si azzera. Il cron del mattino è completo, quello della sera
+incrementale. ⚠️ Un giro bloccato o fallito **non** disattiva nessuno, anche se era
+`--full`: un annuncio che non hai potuto vedere non è un annuncio sparito.
+
+**L'upsert sta in `store/listings.py`** ed è l'unico posto che scrive `listing`: nuova riga
+alla prima vista con il primo prezzo in `price_history`; a ogni vista `last_seen_at` si
+muove, i campi si aggiornano, un prezzo cambiato aggiunge una riga a `price_history`. Il
+verdetto del filtro viaggia con l'annuncio (`passes_hard_filter`, `filter_rejections`,
+`filter_unknowns`) e si riaggiorna a ogni vista. **`review` non viene mai toccata** da un
+ri-scraping.
+
+**GitHub Actions** (`.github/workflows/scrape.yml`): `30 5 * * *` completo, `30 17 * * *`
+incrementale, UTC — l'ora italiana scivola di uno fra estate e inverno, e non vale una
+correzione. `workflow_dispatch` con la casella "giro completo". `concurrency: scrape`
+perché due giri insieme farebbero a gara sulle stesse righe. Segreti: `DATABASE_URL`,
+`GEMINI_API_KEY`. Installa `requirements-scraper.txt`, non `requirements.txt`.
 
 ## Il vocabolario delle zone
 
@@ -215,6 +256,17 @@ leggono.
 
 **Errori.** `Blocked` e `SourceError` in `sources/base.py`; un annuncio malformato viene
 saltato **con un warning nel log**, mai in silenzio, e non ferma il giro.
+
+## Manutenzione del database
+
+`backend/scripts/`, `python -m scripts.<nome>`. Dicono a quale database parlano prima di
+fare qualsiasi cosa (`_common.announce`). `backup` esporta annunci, storico prezzi, review
+e giri in JSON — `--no-raw` per un file piccolo senza i payload dei siti. Le review sono
+la cosa irrecuperabile. ⚠️ `backup-*.json` è in `.gitignore`.
+
+⚠️ `get_engine` passa `connect_timeout` **solo a Postgres**: lo scraper si prova
+end-to-end su un SQLite temporaneo (`DATABASE_URL=sqlite:///C:/…/x.db`, poi `alembic
+upgrade head`), e SQLite quell'argomento lo rifiuta.
 
 ## Variabili d'ambiente
 

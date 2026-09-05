@@ -7,9 +7,9 @@ ogni casa si flagga come interessante, media o scartata.
 - Piano di progetto: [`docs/plan/plan-v1.md`](docs/plan/plan-v1.md)
 - Convenzioni per lavorarci: [`CLAUDE.md`](CLAUDE.md)
 
-**Stato: M0.** Subito e Immobiliare funzionano in prova a vuoto; lo scheletro (API, pagina di
-stato, migrazioni a vuoto) è costruito in locale. Persistenza, valutazione, API della
-dashboard e dashboard arrivano con M1–M4.
+**Stato: M1.** Le due fonti (Subito, Immobiliare) raccolgono e salvano gli annunci su Neon,
+con storico dei prezzi e ciclo di vita; il cron su GitHub Actions gira due volte al giorno.
+Valutazione LLM, API della dashboard e dashboard arrivano con M2–M4.
 
 ## Prerequisiti
 
@@ -39,6 +39,18 @@ Legge due pagine di annunci veri, stampa quali passano il filtro e perché gli a
 `--all` per tutta Torino, `--show-rejected` per vedere anche gli scartati. Non scrive
 niente da nessuna parte.
 
+### Il primo giro vero
+
+```bash
+cd backend
+alembic upgrade head                 # crea le tabelle su Neon (una volta)
+python -m scripts.scrape --full      # tutto Torino, qualche minuto
+python -m scripts.backup --no-raw    # il paracadute
+```
+
+Poi ogni giorno ci pensa GitHub Actions (vedi sotto). A mano: `python -m scripts.scrape`
+è il giro incrementale, `--full` quello completo che segna anche gli annunci spariti.
+
 ### Backend e frontend
 
 ```bash
@@ -53,6 +65,14 @@ Apri **http://localhost:5173/_stato**: tre righe, frontend, API, database. Senza
 cd backend && pytest
 npm run typecheck
 ```
+
+## Il cron su GitHub Actions
+
+Il workflow `.github/workflows/scrape.yml` gira alle 05:30 UTC (completo) e alle 17:30 UTC
+(incrementale). Su GitHub: **Settings → Secrets and variables → Actions → New repository
+secret**, due volte: `DATABASE_URL` (la stringa pooled di Neon) e `GEMINI_API_KEY`. Poi
+**Actions → scrape → Run workflow** per lanciarlo a mano la prima volta; se una fonte è
+bloccata il run diventa rosso e GitHub manda la mail.
 
 ## Deploy su Vercel
 

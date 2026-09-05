@@ -96,8 +96,8 @@ class PoliteClient:
 
         response = self._session.get(url, params=params)
         host = urlsplit(url).hostname or url
-        if response.status_code in (403, 429):
-            raise Blocked(f"{response.status_code} da {host}")
+        if response.status_code in (403, 429) or _is_rate_limit_in_disguise(response):
+            raise Blocked(f"{response.status_code} da {host}: {response.text[:120]}")
         if response.status_code >= 400:
             raise SourceError(f"{response.status_code} da {host}: {response.text[:120]}")
         try:
@@ -107,6 +107,16 @@ class PoliteClient:
 
     def close(self) -> None:
         self._session.close()
+
+
+def _is_rate_limit_in_disguise(response: HttpResponse) -> bool:
+    """Subito answers a rate limit as a 500 whose body says
+    `[429 Too Many Requests]` — seen on 2026-09-03 after a day of probing.
+    It is a block, and must end the run like one."""
+    if response.status_code < 500:
+        return False
+    text = response.text[:500].lower()
+    return "429" in text or "too many requests" in text
 
 
 class ListingSource(Protocol):
