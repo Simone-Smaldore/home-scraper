@@ -155,8 +155,13 @@ passano id geografici — quelli veri (`fkRegione`, `idProvincia`, `idComune`) s
 indocumentati — ma **il riquadro di coordinate** che usa la mappa del sito
 (`minLat/maxLat/minLng/maxLng`), più `path` e `paramsCount` che senza danno 500. Filtra
 **lato server** (`prezzoMassimo`, `superficieMinima`, `localiMinimo`) e ordina per data di
-modifica: 9.600 annunci diventano ~2.700, 25 a pagina. ⚠️ Il riquadro prende anche
-Nichelino, Moncalieri, Grugliasco: `parse_result` scarta per `city`. ⚠️ Le agenzie hanno
+modifica, 25 a pagina.
+⚠️ **Il riquadro è quello delle quattro zone cercate, non tutta Torino** (`TARGET_BBOX`,
+misurato sui dati veri). Il primo giro completo da GitHub ha chiesto tutta la città, 109
+pagine, e alla 65ª Immobiliare ha risposto **418 "I'm a teapot"**: conta le richieste. Il
+riquadro stretto costa ~45 pagine (1.100 annunci), la pausa per Immobiliare è 2–5 s (`scrape.PAUSES`), e
+il 418 è un `Blocked` come gli altri. Quel che il riquadro prende dai bordi — altre zone,
+Grugliasco — lo scartano il filtro (zona) e `parse_result` (`city`). ⚠️ Le agenzie hanno
 **il telefono in chiaro** (`advertiser.agency.phones`); "senza `agency`" è un privato.
 `elevator` è `True` o assente, mai `False`; balcone e terrazzo stanno in `ga4features`;
 il piano è una sigla (`T`, `R`, `S`, o `S, 2` per i multilivello).
@@ -189,6 +194,11 @@ dichiarare un annuncio sparito**: chi non compare prende `missed_runs += 1`, a 2
 torna attivo e il contatore si azzera. Il cron del mattino è completo, quello della sera
 incrementale. ⚠️ Un giro bloccato o fallito **non** disattiva nessuno, anche se era
 `--full`: un annuncio che non hai potuto vedere non è un annuncio sparito.
+
+⚠️ **Una query per pagina, non per annuncio.** Il runner gira negli USA e Neon sta a
+Francoforte: ~100 ms a query, e il primo giro con una `SELECT` per annuncio ha impiegato
+11 minuti. `fetch_existing` carica le righe di un lotto di 50 in un colpo e `upsert` le
+riceve già in mano.
 
 **L'upsert sta in `store/listings.py`** ed è l'unico posto che scrive `listing`: nuova riga
 alla prima vista con il primo prezzo in `price_history`; a ogni vista `last_seen_at` si

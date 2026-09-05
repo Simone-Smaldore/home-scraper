@@ -25,6 +25,7 @@ import argparse
 import logging
 import sys
 from collections import Counter
+from collections.abc import Iterable, Iterator
 from datetime import datetime, timezone
 
 from app.db import get_session_factory
@@ -36,23 +37,44 @@ from app.models import ScrapeRun
 from app.sources.base import Blocked, ListingSource, PoliteClient, SourceError
 from app.sources.immobiliare import ImmobiliareSource
 from app.sources.subito import SubitoSource
-from app.store.listings import known_ids, mark_missing, upsert
+from app.store.listings import fetch_existing, known_ids, mark_missing, upsert
 from scripts._common import Abort, announce, plural
 
 # Pages to read in a dry run unless --all is given: enough to see the filter at
 # work, few enough to stay polite while iterating on it.
 DRY_RUN_PAGES = 2
 
-# Commit every so many ads so a block halfway through keeps what came before.
-COMMIT_EVERY = 50
+# Ads per database round trip and per commit: one lookup query per batch, and
+# a block halfway through keeps what came before.
+BATCH = 50
+
+# Seconds between requests, per site. Immobiliare counts requests and answers
+# 418 when it has had enough; a longer pause is the polite half of the fix,
+# the smaller bounding box is the other.
+PAUSES: dict[SourceName, tuple[float, float]] = {
+    SourceName.SUBITO: (1.0, 3.0),
+    SourceName.IMMOBILIARE: (2.0, 5.0),
+}
 
 
-def build_source(name: SourceName, client: PoliteClient) -> ListingSource:
+def build_source(name: SourceName) -> ListingSource:
+    client = PoliteClient(pause_seconds=PAUSES[name])
     if name is SourceName.SUBITO:
         return SubitoSource(client)
     if name is SourceName.IMMOBILIARE:
         return ImmobiliareSource(client, CRITERIA)
     raise NotImplementedError(f"fonte non ancora implementata: {name}")
+
+
+def _batches(items: Iterable[Listing], size: int) -> Iterator[list[Listing]]:
+    batch: list[Listing] = []
+    for item in items:
+        batch.append(item)
+        if len(batch) >= size:
+            yield batch
+            batch = []
+    if batch:
+        yield batch
 
 
 def describe(listing: Listing) -> str:
@@ -98,16 +120,18 @@ def run_source(source: ListingSource, *, full: bool, max_pages: int | None) -> S
         counts: Counter[str] = Counter()
 
         try:
-            for listing in source.fetch(is_known=lambda i: i in known, max_pages=max_pages):
-                verdict = check(listing, CRITERIA)
-                result = upsert(db, listing, verdict, now)
-                seen.add(listing.source_id)
-                counts["fetched"] += 1
-                counts["new" if result.created else "updated"] += 1
-                counts["price_changes"] += result.price_changed
-                counts["passing"] += verdict.passes
-                if counts["fetched"] % COMMIT_EVERY == 0:
-                    db.commit()
+            listings = source.fetch(is_known=lambda i: i in known, max_pages=max_pages)
+            for batch in _batches(listings, BATCH):
+                existing = fetch_existing(db, source.name, {item.source_id for item in batch})
+                for listing in batch:
+                    verdict = check(listing, CRITERIA)
+                    result = upsert(db, listing, verdict, now, existing)
+                    seen.add(listing.source_id)
+                    counts["fetched"] += 1
+                    counts["new" if result.created else "updated"] += 1
+                    counts["price_changes"] += result.price_changed
+                    counts["passing"] += verdict.passes
+                db.commit()
             if full:
                 counts["deactivated"] = mark_missing(db, source.name, seen)
         except Blocked as exc:
@@ -240,32 +264,26 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     names = [SourceName(args.source)] if args.source else list(SourceName)
-    client = PoliteClient()
-    try:
-        if args.dry_run:
-            max_pages = None if args.all else (args.pages or DRY_RUN_PAGES)
-            codes = [
-                dry_run(build_source(name, client), max_pages=max_pages, show_rejected=args.show_rejected)
-                for name in names
-            ]
-            return max(codes)
 
-        try:
-            announce(f"Raccolta annunci — giro {'completo' if args.full else 'incrementale'}")
-        except Abort as exc:
-            print(exc)
-            return 1
-        if not args.no_llm:
-            print("valutazione LLM: non ancora disponibile, arriva con M2")
-
-        runs = [
-            run_source(build_source(name, client), full=args.full, max_pages=args.pages)
+    if args.dry_run:
+        max_pages = None if args.all else (args.pages or DRY_RUN_PAGES)
+        codes = [
+            dry_run(build_source(name), max_pages=max_pages, show_rejected=args.show_rejected)
             for name in names
         ]
-        # A blocked or failed source turns the workflow red, which is the alert.
-        return 0 if all(run.status == "ok" for run in runs) else 1
-    finally:
-        client.close()
+        return max(codes)
+
+    try:
+        announce(f"Raccolta annunci — giro {'completo' if args.full else 'incrementale'}")
+    except Abort as exc:
+        print(exc)
+        return 1
+    if not args.no_llm:
+        print("valutazione LLM: non ancora disponibile, arriva con M2")
+
+    runs = [run_source(build_source(name), full=args.full, max_pages=args.pages) for name in names]
+    # A blocked or failed source turns the workflow red, which is the alert.
+    return 0 if all(run.status == "ok" for run in runs) else 1
 
 
 if __name__ == "__main__":

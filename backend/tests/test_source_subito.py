@@ -201,6 +201,13 @@ def test_a_block_is_raised_not_retried() -> None:
     assert session.hits == 1
 
 
+def test_immobiliare_teapot_is_a_block() -> None:
+    session = FakeSession(418, '"I\'m a teapot"')
+    with pytest.raises(Blocked):
+        PoliteClient(sleep=lambda _s: None, session=session).get_json("https://example.test/x")
+    assert session.hits == 1
+
+
 def test_a_rate_limit_wrapped_in_a_500_is_a_block() -> None:
     body = '{"status":"Internal Server Error","errors":[{"error_code":"SEARCH:internal-server-error","info":"[429 Too Many Requests]"}]}'
     session = FakeSession(500, body)

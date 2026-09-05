@@ -96,7 +96,9 @@ class PoliteClient:
 
         response = self._session.get(url, params=params)
         host = urlsplit(url).hostname or url
-        if response.status_code in (403, 429) or _is_rate_limit_in_disguise(response):
+        # 418 is Immobiliare's way of saying "enough": seen after ~65 pages in a
+        # row from a GitHub runner on 2026-09-04. A block like the others.
+        if response.status_code in (403, 418, 429) or _is_rate_limit_in_disguise(response):
             raise Blocked(f"{response.status_code} da {host}: {response.text[:120]}")
         if response.status_code >= 400:
             raise SourceError(f"{response.status_code} da {host}: {response.text[:120]}")

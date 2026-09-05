@@ -5,16 +5,23 @@ browser running JavaScript — Chrome impersonation included. The search API
 (`api-next/search-list/listings/`) does not: it answers with no cookie at all.
 What it needs is a way to say *where*, and the geography ids it wants
 (`fkRegione`, `idProvincia`, `idComune`) are undocumented; the **bounding box**
-the site's own map uses works instead, and is what we send. The box below is
-Turin as the site draws it, which also takes in Nichelino, Moncalieri and
-Grugliasco at the edges — those are dropped by `city` in `parse_result`.
+the site's own map uses works instead, and is what we send.
+
+⚠️ The box is the four target zones, not the whole city. The first full run
+from GitHub asked for all of Turin (109 pages) and got a 418 "I'm a teapot"
+after 65: the site counts requests. The box below was measured on the 1,627
+ads that run did save (lat 45.018–45.086, lng 7.617–7.675 for the target
+zones, plus a margin) and takes ~45 pages (1,100 ads) instead — under the
+threshold, with the longer pause in scripts.PAUSES. Anything the box catches
+from neighbouring zones or towns is handled downstream: the hard filter
+rejects by zone, `parse_result` drops other towns by `city`.
 
 The API also filters server-side (`prezzoMassimo`, `superficieMinima`,
-`localiMinimo`) and sorts by modification date: 9,600 ads become ~2,700 and
-we stop at the first page made entirely of known ids. ⚠️ This means the
-database only ever sees ads within budget, size and rooms from this source —
-the zone median in domain/pricing.py is a median of *comparable* flats, not of
-the whole market. Fine for the job, worth knowing.
+`localiMinimo`) and sorts by modification date, and we stop at the first page
+made entirely of known ids. ⚠️ This means the database only ever sees ads
+within budget, size and rooms from this source — the zone median in
+domain/pricing.py is a median of *comparable* flats, not of the whole market.
+Fine for the job, worth knowing.
 
 Field notes (probed 2026-09-03 on 100 filtered ads):
   - `elevator` is True or absent, never False: absence is "not said".
@@ -45,12 +52,14 @@ log = logging.getLogger(__name__)
 SEARCH_URL = "https://www.immobiliare.it/api-next/search-list/listings/"
 PAGE_SIZE = 25
 
-# The box the site's map sends for "Torino".
-TORINO_BBOX: dict[str, str] = {
-    "minLat": "44.996368",
-    "maxLat": "45.150569",
-    "minLng": "7.614212",
-    "maxLng": "7.737808",
+# Cenisia/San Paolo, Cit Turin/San Donato/Campidoglio, Crocetta, Santa Rita/
+# Lingotto, with ~500 m of margin. (Whole Turin, as the site's map sends it:
+# 44.996368–45.150569 / 7.614212–7.737808.)
+TARGET_BBOX: dict[str, str] = {
+    "minLat": "45.014",
+    "maxLat": "45.090",
+    "minLng": "7.612",
+    "maxLng": "7.680",
 }
 
 # idCategoria=1 residenziale · idContratto=1 vendita · criterio/ordine = newest
@@ -93,6 +102,11 @@ MICROZONES: dict[str, Zone] = {
     "Barriera di Milano": Zone.BARRIERA_MILANO,
     "Rebaudengo": Zone.BARRIERA_MILANO,
     "Falchera": Zone.BARRIERA_MILANO,
+    "Barriera di Lanzo": Zone.BARRIERA_MILANO,
+    "Barca": Zone.BARRIERA_MILANO,
+    "Bertolla": Zone.BARRIERA_MILANO,
+    "Superga": Zone.NIZZA_MILLEFONTI,
+    "Precollina - Colle della Maddalena": Zone.NIZZA_MILLEFONTI,
     "Regio Parco": Zone.VANCHIGLIA,
     "Vanchiglia": Zone.VANCHIGLIA,
     "Vanchiglietta": Zone.VANCHIGLIA,
@@ -121,6 +135,8 @@ MACROZONES: dict[str, Zone] = {
     "Borgo Vittoria, Parco Dora": Zone.MADONNA_DI_CAMPAGNA,
     "Cavoretto, Gran Madre": Zone.NIZZA_MILLEFONTI,
     "Madonna del Pilone, Sassi": Zone.NIZZA_MILLEFONTI,
+    "Colle della Maddalena, Superga": Zone.NIZZA_MILLEFONTI,
+    "Barriera di Lanzo, Falchera, Barca, Bertolla": Zone.BARRIERA_MILANO,
 }
 
 CONDITIONS: dict[str, Condition] = {
@@ -138,7 +154,7 @@ class ImmobiliareSource:
         self._client = client
         self._params = {
             **BASE_PARAMS,
-            **TORINO_BBOX,
+            **TARGET_BBOX,
             "prezzoMassimo": str(criteria.max_price_eur),
             "superficieMinima": str(criteria.min_size_sqm),
             "localiMinimo": str(criteria.min_rooms),

@@ -40,10 +40,36 @@ def known_ids(db: Session, source: str) -> set[str]:
     return set(db.scalars(select(Listing.source_id).where(Listing.source == source)))
 
 
-def upsert(db: Session, data: ListingData, verdict: Verdict, now: datetime) -> UpsertResult:
-    row = db.scalar(
-        select(Listing).where(Listing.source == data.source, Listing.source_id == data.source_id)
+def fetch_existing(db: Session, source: str, source_ids: set[str]) -> dict[str, Listing]:
+    """The rows already stored for these ids, in one query.
+
+    The runner calls this once per page and hands the result to `upsert`: from
+    a GitHub runner in the US to Neon in Frankfurt one query costs ~100 ms, and
+    a full run has thousands of ads. One round trip per page, not per ad.
+    """
+    if not source_ids:
+        return {}
+    rows = db.scalars(
+        select(Listing).where(Listing.source == source, Listing.source_id.in_(source_ids))
     )
+    return {row.source_id: row for row in rows}
+
+
+def upsert(
+    db: Session,
+    data: ListingData,
+    verdict: Verdict,
+    now: datetime,
+    existing: dict[str, Listing] | None = None,
+) -> UpsertResult:
+    """Create or refresh the row for `data`. `existing`, when given, is the
+    output of `fetch_existing` for this batch and saves the lookup."""
+    if existing is None:
+        row = db.scalar(
+            select(Listing).where(Listing.source == data.source, Listing.source_id == data.source_id)
+        )
+    else:
+        row = existing.get(data.source_id)
     created = row is None
     if row is None:
         row = Listing(source=data.source, source_id=data.source_id, first_seen_at=now)

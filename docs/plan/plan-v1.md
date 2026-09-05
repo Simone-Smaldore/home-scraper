@@ -307,6 +307,13 @@ Due scostamenti:
 - **Subito manda il 429 come un 500** con "[429 Too Many Requests]" nel corpo: successo
   durante lo sviluppo, dopo una giornata di sondaggi. Trattato come blocco.
 
+Il primo giro da GitHub Actions (4 settembre): **gli IP di GitHub passano** su entrambi i
+siti. Subito: 1.784 annunci, 191 nei criteri, 274 s. Immobiliare: 1.627 annunci poi
+**418 "I'm a teapot"** alla 65ª pagina di 109 — conta le richieste. Rimedio: riquadro di
+coordinate ristretto alle quattro zone (~45 pagine, 1.100 annunci), pausa 2–5 s, 418 trattato come
+blocco. E una query a Neon per lotto di 50 invece che per annuncio: il giro era lento per
+la latenza USA→Francoforte, non per i siti.
+
 **M2 — Valutazione.** `llm/client.py` con la cascata, `prompts/evaluate_v1.md`,
 `domain/evaluation.py` e `domain/pricing.py`, tabella `evaluation`, test sul parsing (JSON
 pulito, JSON dentro testo, JSON rotto, score fuori scala). Lettura a mano di venti verdetti

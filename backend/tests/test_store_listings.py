@@ -14,6 +14,7 @@ from app.domain.vocabulary import ReviewStatus, SourceName, Zone
 from app.models import Listing, PriceHistory, Review
 from app.store.listings import (
     MISSED_RUNS_BEFORE_INACTIVE,
+    fetch_existing,
     known_ids,
     mark_missing,
     upsert,
@@ -154,6 +155,24 @@ def test_rescrape_never_touches_the_review(db: Session) -> None:
     review = db.scalar(select(Review))
     assert review is not None
     assert review.status == "interessante" and review.note == "da vedere"
+
+
+def test_batched_upsert_with_prefetched_rows(db: Session) -> None:
+    store(db, make("a"))
+    store(db, make("b", price_eur=150_000))
+
+    batch = [make("a", price_eur=210_000), make("b", price_eur=150_000), make("c")]
+    existing = fetch_existing(db, "subito", {item.source_id for item in batch})
+    assert set(existing) == {"a", "b"}
+
+    later = T0 + timedelta(days=1)
+    results = [upsert(db, item, check(item), later, existing) for item in batch]
+    db.commit()
+
+    assert [r.created for r in results] == [False, False, True]
+    assert [r.price_changed for r in results] == [True, False, False]
+    assert len(list(db.scalars(select(Listing)))) == 3
+    assert fetch_existing(db, "subito", set()) == {}
 
 
 def test_verdict_object_round_trips_as_lists(db: Session) -> None:
